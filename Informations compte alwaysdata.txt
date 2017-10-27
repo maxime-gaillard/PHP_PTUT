@@ -1,0 +1,16 @@
+Gmail :
+Prenom : groupe2equipe2ptut
+Nom : reverselogistics
+Nom d'utilisateur : groupe2equipe2ptut
+Adresse mail = groupe2equipe2ptut@gmail.com
+Mdp = ptutequipe2groupe2
+
+alwaysdata :
+Nom du compte : groupe2equipe2ptut
+Adresse mail = groupe2equipe2ptut@gmail.com
+Mdp : ptutequipe2groupe2
+
+Base de données : groupe2equipe2ptut_base
+PhpAdmin :
+Utilisateur : 146012_prenomEnMinuscules
+Mdp : 123
