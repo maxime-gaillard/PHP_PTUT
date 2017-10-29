@@ -14,7 +14,8 @@ try {
 
     $req = $bdd->prepare("SELECT * FROM Publication WHERE LibelleP LIKE '%?%'");
 
-    $keyword = htmlspecialchars(isset($_POST['keyword']) ? $_POST['keyword'] : NULL);
+    $keyword = htmlspecialchars($_POST['keyword']);
+    if($keyword == "" || is_null($keyword)) die();
     $req->execute(array($keyword));
 
     while ($data = $req->fetch()) {
