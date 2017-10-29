@@ -12,11 +12,11 @@ try {
     // $req = $bdd->query("SELECT * FROM Publication WHERE LibelleP LIKE '%".$keyword."%'");
     // This instruction has low security regarding SQL injection, we use prepare and execute instead.
 
-    $req = $bdd->prepare("SELECT * FROM Publication WHERE LibelleP LIKE '%?%'");
-
     $keyword = htmlspecialchars($_POST['keyword']);
     if($keyword == "" || is_null($keyword)) die();
-    $req->execute(array($keyword));
+
+    $req = $bdd->prepare('SELECT * FROM Publication WHERE LibelleP LIKE ?');
+    $req->execute(array('%' . $keyword . '%')); // % to get completion
 
     while ($data = $req->fetch()) {
         ?> <strong>
