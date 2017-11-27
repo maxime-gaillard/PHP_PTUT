@@ -9,6 +9,7 @@ catch (Exception $e)
     die('Erreur de connexion : ' . $e->getMessage());
 }
 
+
 $req = $bdd->prepare('SELECT NumInscrit FROM Inscrit WHERE Nom = :nom');
 $req->execute(array('Nom' => $nom));
 
