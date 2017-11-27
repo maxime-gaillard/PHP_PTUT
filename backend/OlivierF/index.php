@@ -71,13 +71,13 @@
 
 <form action="testConnexion.php"  method="post">
     <div>
-        <label for="mail">Adresse mail :</label>
-        <input type="email" name='mail' id="nom" />
+        <label for="Email">Adresse mail :</label>
+        <input type="email" name='Email' id="Email" />
     </div>
 
     <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" />
+        <label for="MotDePasse">Mot de passe :</label>
+        <input type="password" name="MotDePasse" id="MotDePasse" />
     </div>
 
     <div class="button">

@@ -9,9 +9,11 @@ catch (Exception $e)
     die('Erreur de connexion : ' . $e->getMessage());
 }
 
+$pass_hache = password_hash($_POST['MotDePasse'], PASSWORD_DEFAULT);
 
-$req = $bdd->prepare('SELECT NumInscrit FROM Inscrit WHERE Nom = :nom');
-$req->execute(array('Nom' => $nom));
+$req = $bdd->prepare('SELECT NumInscrit FROM Inscrit WHERE Email = :Email AND MotDePasse = :MotDePasse');
+$req->execute(array('Email' => $Email,
+                    'MotDePasse' => $MotDePasse));
 
 $resultat = $req->fetch();
 
@@ -23,7 +25,7 @@ else
 {
     session_start();
     $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
-    $_SESSION['Nom'] = $nom;
+    $_SESSION['Email'] = $Email;
     echo 'Vous êtes connecté !';
 }
 ?>
