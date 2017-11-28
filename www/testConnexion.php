@@ -9,22 +9,26 @@ catch (Exception $e)
     die('Erreur de connexion : ' . $e->getMessage());
 }
 
-$pass_hache = password_hash($_POST['MotDePasse1'], PASSWORD_DEFAULT);
+$pass_hache = password_hash($_POST['MotDePasse1'], PASSWORD_BCRYPT);
 
-$req = $bdd->prepare('SELECT NumInscrit FROM Inscrit WHERE Email = :Email1 AND MotDePasse = :MotDePasse1');
+$req = $bdd->prepare('SELECT NumInscrit FROM Inscrit WHERE Email = :Email1');
 
-$req->execute(array('Email' => $_POST['Email1'],'MotDePasse' => $pass_hache));
+$req->execute(array('Email1' => $_POST['Email1'],'MotDePasse1' => $pass_hache));
 
 $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
-    echo '\n';
-    echo $pass_hache;
+    echo 'Mauvais identifiant !';
 }
 else
 {
+    if (password_verify($_POST['MotDePasse1'], $pass_hache)) {
+        echo "OK";
+    }
+    else {
+        echo 'Mauvais mot de passe !';
+    }
     session_start();
     $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
     $_SESSION['Email1'] = $Email;
