@@ -112,15 +112,15 @@
         <label for="Entreprise">Entreprise</label>
     </div>
 
-    <div>
-        <p>Libelle : </p>
-        <input type="text" name="libelle" />
-    </div>
+            <div>
+                <p>Libelle : </p>
+                <input type="text" name="libelle" />
+            </div>
 
-    <div>
-        <p>Date : </p>
-        <input type="text" name="date" />
-    </div>
+            <div>
+                <p>Date : </p>
+                <input type="text" name="date" />
+            </div>
 
     <div>
         <p>SIREN : </p>
