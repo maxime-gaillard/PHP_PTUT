@@ -14,31 +14,38 @@
 		
 		
 		<script>
-			function myFunction() {
-				$("#imageUpload").click();
-			};
 			
-			function onlyA(x) {
+			//function myFunction() {
+			//	$("#imageUpload").click();
+			//};
+			
+			function onlyEtudiant(x) {
 			    if (x.checked) {
-					document.getElementById("A").style.visibility = "visible";
-					document.getElementById("B").style.visibility = "hidden";
-					document.getElementById("C").style.visibility = "hidden";
+					
+					document.getElementById('etudiant').className = 'visible';
+					document.getElementById('chercheur').className = 'invisible';
+					document.getElementById('entreprise1').className = 'invisible';
+					document.getElementById('entreprise2').className = 'invisible';
 			    }
 			}
 
-			function onlyB(x) {
+			function onlyChercheur(x) {
 			    if (x.checked) {
-					document.getElementById("A").style.visibility = "hidden";
-					document.getElementById("B").style.visibility = "visible";
-					document.getElementById("C").style.visibility = "hidden";
+					
+					document.getElementById('etudiant').className = 'invisible';
+					document.getElementById('chercheur').className = 'visible';
+					document.getElementById('entreprise1').className = 'invisible';
+					document.getElementById('entreprise2').className = 'invisible';
 			    }
 			}
 			
-			function onlyC(x) {
+			function onlyEntreprise(x) {
 			    if (x.checked) {
-					document.getElementById("A").style.visibility = "hidden";
-					document.getElementById("B").style.visibility = "hidden";
-					document.getElementById("C").style.visibility = "visible";
+					
+					document.getElementById('etudiant').className = 'invisible';
+					document.getElementById('chercheur').className = 'invisible';
+					document.getElementById('entreprise1').className = 'visible';
+					document.getElementById('entreprise2').className = 'visible';
 			    }
 			}
 		</script>
@@ -57,7 +64,7 @@
                     <li><a href="#" class="active">Accueil</a></li>
                     <li><a href="#">Publication</a></li>
                     <li><a href="#">Publier</a></li>
-		    <li><a href="inscription.html">inscription</a></li>
+					<li><a href="inscription.html">inscription</a></li>
                     <li></li>
                 </ul>
             </div>
@@ -76,36 +83,48 @@
 					<div class="container">
 						<div class="text-center">
 							
-							<input class="w3-radio" type="radio" name="profession" value="etudiant" checked onchange="onlyA(this)">
+							<input class="w3-radio" type="radio" name="profession" value="etudiant" onchange="onlyEtudiant(this)">
 							<label>Etudiant</label>
 							
-							<input class="w3-radio" type="radio" name="profession" value="chercheur">
+							<input class="w3-radio" type="radio" name="profession" value="chercheur" onchange="onlyChercheur(this)">
 							<label>Chercheur</label>
 							
-							<input class="w3-radio" type="radio" name="profession" value="entreprise" >
+							<input class="w3-radio" type="radio" name="profession" value="entreprise" onchange="onlyEntreprise(this)">
 							<label>Entreprise</label>
 							
-							<p>
 						</div>
 					</div>
 					<form class="text-center">
-						<div class="form-group">
-							<input type="prenom" class="form-control" id="prenom" placeholder="Entrer votre prenom">
+						<div class="form-group" >
+							<input type="prenom" class="form-control" placeholder="Entrer votre prenom">
 						</div>
 						<div class="form-group">
-							<input type="nom" class="form-control" id="nom" placeholder="Entrer votre nom">
+							<input type="nom" class="form-control" placeholder="Entrer votre nom">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control" id="email" placeholder="Entrer email">
+							<input type="email" class="form-control" placeholder="Entrer email">
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" id="pwd" placeholder="Entrer password">
+							<input type="password" class="form-control" placeholder="Entrer password">
+						</div>
+						<div class ="invisible" id="etudiant" class="form-group" >
+							<input type="universite" class="form-control" placeholder="numero etudiant">
+						</div>
+						<div class ="invisible" id="chercheur" class="form-group" >
+							<input type="numChercheur" class="form-control" placeholder="numero chercheur">
+						</div>
+						<div class ="invisible" id="entreprise1" class="form-group" >
+							<input type="siren" class="form-control" placeholder="SIREN">
+						</div>
+						<div class ="invisible" id="entreprise2" class="form-group" >
+							<input type="nomEntreprise" class="form-control" placeholder="nom enterprise">
+						</div></br></br></br>
+						<div class="form-group" >
+							<textarea type="description" class="form-control" placeholder="Entrer votre description" cols="10" rows="8"></textarea>
 						</div></br>
+						
 						<div class="form-group" >
-							<textarea type="description" class="form-control" id="descri" placeholder="Entrer votre description" cols="10" rows="8"></textarea>
-						</div>
-						<div class="form-group" >
-							<img id="profileImage" src="octocat.png" class="img-rounded" alt="octocat !" style="max-width: 70%;" onclick="javascript:myFunction();">
+							<img id="profileImage" src="octocat.png" class="img-rounded" alt="octocat !" style="max-width: 70%;"> <!--onclick="javascript:myFunction();"-->
 							<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
 						</div>
 						<div class="form-group" >
