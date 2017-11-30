@@ -89,42 +89,42 @@
         </form>
 
         <h2>Test de la mise en ligne d'une publication</h2>
-        <form action="insription.php" method="post">
+        <form action="publication.php" method="post">
             <p>Quelle personne etes vous ?</p>
 
+<!--            <div>-->
+<!--                <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />-->
+<!--                <label for="Etudiant">Etudiant</label>-->
+<!--            </div>-->
+<!---->
+<!--            <div>-->
+<!--                <input type="radio" name="type" value="chercheur" id="Chercheur" />-->
+<!--                <label for="Chercheur">Chercheur</label>-->
+<!--            </div>-->
+<!---->
+<!--            <div>-->
+<!--                <input type="radio" name="type" value="entreprise" id="Entreprise" />-->
+<!--                <label for="Entreprise">Entreprise</label>-->
+<!--            </div>-->
+
             <div>
-                <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />
-                <label for="Etudiant">Etudiant</label>
+                <p>Titre : </p>
+                <input type="text" name="titre" />
             </div>
 
             <div>
-                <input type="radio" name="type" value="chercheur" id="Chercheur" />
-                <label for="Chercheur">Chercheur</label>
+                <p>Date : </p>
+                <input type="text" name="date" />
+            </div>
+            <div>
+                <p>Description : </p>
+                <input type="text" name="description" />
             </div>
 
-            <div>
-                <input type="radio" name="type" value="entreprise" id="Entreprise" />
-                <label for="Entreprise">Entreprise</label>
-            </div>
-
-            <div>
-                <p>Nom : </p>
-                <input type="text" name="nom" />
-            </div>
-
-            <div>
-                <p>Prenom : </p>
-                <input type="text" name="prenom" />
-            </div>
-            <div>
-                <p>SIREN : </p>
-                <input type="text" name="siren" />
-            </div>
-
-            <div>
-                <p>Identifiant chercheur :</Identif> : </p>
-                <input type="text" name="idChercheur" />
-            </div>
+<!--            <div>-->
+<!--                <p>Identifiant chercheur :</Identif> : </p>-->
+<!--                <input type="text" name="idChercheur" />-->
+<!--            </div>-->
 
             <div>
                 <p>Votre message ici: </p>
