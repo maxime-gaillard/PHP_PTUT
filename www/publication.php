@@ -34,6 +34,7 @@ try {
         $req = $bdd->prepare('INSERT INTO Publication (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
     }
 
+
     $req = $bdd->prepare('INSERT INTO Publication (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
     $req->execute(array(
         'LibelleP' => $_POST['titre'],
