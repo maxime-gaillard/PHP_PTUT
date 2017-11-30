@@ -100,8 +100,8 @@
     <input type="radio" name="type" value="chercheur" id="Chercheur" /> <label for="Chercheur">Chercheur</label>
     <input type="radio" name="type" value="entreprise" id="Entreprise" /> <label for="Entreprise">Entreprise</label>
 
-    <p>Nom : <input type="text" name="nom" /></p>
-    <p>Prenom : <input type="text" name="prenom" /></p>
+    <p>Nom : <input type="text" name="libelle" /></p>
+    <p>Prenom : <input type="text" name="date" /></p>
     <p>SIREN : <input type="text" name="siren" /></p>
     <p>Identifiant chercheur :</Identif> : <input type="text" name="idChercheur" /></p>
 
