@@ -85,5 +85,12 @@
     </div>
 </form>
 
+<h2>Test de recherche base de données</h2>
+
+<form action="keyword_query.php" method="post">
+    <p>Saisir : <input type="text" name="keyword" /></p>
+    <p><input type="submit" value="Trouver"/></p>
+</form>
+
 </body>
 </html>
