@@ -85,5 +85,60 @@
     </div>
 </form>
 
+<h2>Test de recherche base de données</h2>
+
+<form action="keyword_query.php" method="post">
+    <p>Saisir : <input type="text" name="keyword" /></p>
+    <p><input type="submit" value="Trouver"/></p>
+</form>
+
+<h2>Test de la mise en ligne d'une publication</h2>
+
+<form action="insription.php" method="post">
+    <p>Quelle personne etes vous ?</p>
+
+    <div>
+        <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />
+        <label for="Etudiant">Etudiant</label>
+    </div>
+
+    <div>
+        <input type="radio" name="type" value="chercheur" id="Chercheur" />
+        <label for="Chercheur">Chercheur</label>
+    </div>
+
+    <div>
+        <input type="radio" name="type" value="entreprise" id="Entreprise" />
+        <label for="Entreprise">Entreprise</label>
+    </div>
+
+    <div>
+        <p>Nom : </p>
+        <input type="text" name="nom" />
+    </div>
+
+    <div>
+        <p>Prenom : </p>
+        <input type="text" name="prenom" />
+    </div>
+
+    <div>
+        <p>SIREN : </p>
+        <input type="text" name="siren" />
+    </div>
+
+    <div>
+        <p>Identifiant chercheur :</Identif> : </p>
+        <input type="text" name="idChercheur" />
+    </div>
+
+    <div>
+        <p>Votre message ici: </p>
+        <textarea name="description" rows="8" cols="45"></textarea>
+    </div>
+
+    <p><input type="submit" value="S'inscrire"/></p>
+</form>
+
 </body>
 </html>
