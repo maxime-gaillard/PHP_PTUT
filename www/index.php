@@ -96,49 +96,22 @@
 
 <form action="insription.php" method="post">
     <p>Quelle personne etes vous ?</p>
+    <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" /> <label for="Etudiant">Etudiant</label>
+    <input type="radio" name="type" value="chercheur" id="Chercheur" /> <label for="Chercheur">Chercheur</label>
+    <input type="radio" name="type" value="entreprise" id="Entreprise" /> <label for="Entreprise">Entreprise</label>
 
-    <div>
-        <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />
-        <label for="Etudiant">Etudiant</label>
-    </div>
+    <p>Nom : <input type="text" name="libelle" /></p>
+    <p>Prenom : <input type="text" name="date" /></p>
+    <p>SIREN : <input type="text" name="siren" /></p>
+    <p>Identifiant chercheur :</Identif> : <input type="text" name="idChercheur" /></p>
 
-    <div>
-        <input type="radio" name="type" value="chercheur" id="Chercheur" />
-        <label for="Chercheur">Chercheur</label>
-    </div>
-
-    <div>
-        <input type="radio" name="type" value="entreprise" id="Entreprise" />
-        <label for="Entreprise">Entreprise</label>
-    </div>
-
-    <div>
-        <p>Nom : </p>
-        <input type="text" name="nom" />
-    </div>
-
-    <div>
-        <p>Prenom : </p>
-        <input type="text" name="prenom" />
-    </div>
-
-    <div>
-        <p>SIREN : </p>
-        <input type="text" name="siren" />
-    </div>
-
-    <div>
-        <p>Identifiant chercheur :</Identif> : </p>
-        <input type="text" name="idChercheur" />
-    </div>
-
-    <div>
-        <p>Votre message ici: </p>
-        <textarea name="description" rows="8" cols="45"></textarea>
-    </div>
+    <p>Votre message ici: </p>
+    <textarea name="description" rows="8" cols="45">
+        </textarea>
 
     <p><input type="submit" value="S'inscrire"/></p>
 </form>
+
 
 </body>
 </html>

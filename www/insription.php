@@ -5,8 +5,11 @@ try {
     $type = htmlspecialchars($_POST['type']);
     if($type == "" || is_null($type)) die();
 
-    $name = htmlspecialchars($_POST['name']);
-    if($name == "" || is_null($name)) die();
+    $libelle = htmlspecialchars($_POST['libelle']);
+    if($libelle == "" || is_null($libelle)) die();
+
+    $date = htmlspecialchars($_POST['date']);
+    if($date == "" || is_null($date)) die();
 
     $descitpion = htmlspecialchars($_POST['description']);
     if($descitpion == "" || is_null($descitpion)) die();
@@ -15,17 +18,34 @@ try {
         $idChercheur = htmlspecialchars($_POST['idChercheur']);
         if($idChercheur == "" || is_null($idChercheur)) die();
 
-        $req = $bdd->prepare('INSERT INTO Inscrit (Nom, Description) VALUES (?, ?)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
-        $req->execute(array('%' . $descitpion . '%' . '%' . $name . '%'));
+
+        $req = $bdd->prepare('INSERT INTO Publication (LibelleP, Description, Date) VALUES (:LibelleP, :Description, :Date)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
+        $req->execute(array(
+            'LibelleP' => $_POST['libelle'],
+            'Description' => $_POST['description'],
+            'Date' => $_POST['date']) ) or die ( print_r($req->errorInfo())) ;
+
+        echo 'Une nouvelle publication a été ajoutée !';
+
     } elseif ($type == "entreprise") {
         $siren = htmlspecialchars($_POST['siren']);
         if($siren == "" || is_null($siren)) die();
 
-        $req = $bdd->prepare('INSERT INTO Inscrit (Nom, Description) VALUES (?, ?)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
-        $req->execute(array('%' . $descitpion . '%' . '%' . $name . '%'));
+        $req = $bdd->prepare('INSERT INTO Publication (Nom, Description) VALUES (:Nom, :Description)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
+
+        $req->execute(array(
+            'Nom' => $_POST['name'],
+            'Description' => $_POST['description']) ) or die ( print_r($req->errorInfo())) ;
+
+        echo 'Une nouvelle publication a été ajoutée !';
+
     } elseif ($type == "etudiant") {
-        $req = $bdd->prepare('INSERT INTO Inscrit (Nom, Description) VALUES (?, ?)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
-        $req->execute(array('%' . $descitpion . '%' . '%' . $name . '%'));
+        $req = $bdd->prepare('INSERT INTO Publication (Nom, Description) VALUES (:Nom, :Description)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
+        $req->execute(array(
+            'Nom' => $_POST['name'],
+            'Description' => $_POST['description']) ) or die ( print_r($req->errorInfo())) ;
+
+        echo 'Une nouvelle publication a été ajoutée !';
     }
 
 
