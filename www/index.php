@@ -112,5 +112,6 @@
     <p><input type="submit" value="S'inscrire"/></p>
 </form>
 
+
 </body>
 </html>
