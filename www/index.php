@@ -113,23 +113,23 @@
     </div>
 
     <div>
-        <p>Nom : </p>
-        <input type="text" name="nom" />
+        <label for="SaisieNom">Nom : </label>
+        <input type="text" name="nom" id="SaisieNom" />
     </div>
 
     <div>
-        <p>Prenom : </p>
-        <input type="text" name="prenom" />
+        <label for="SaisiePrenom">Prenom : </label>
+        <input type="text" name="prenom" id="SaisiePrenom" />
     </div>
 
     <div>
-        <p>SIREN : </p>
-        <input type="text" name="siren" />
+        <label for="SaisieSIREN">SIREN : </label>
+        <input type="text" name="siren" id="SaisieSIREN" />
     </div>
 
     <div>
-        <p>Identifiant chercheur :</Identif> : </p>
-        <input type="text" name="idChercheur" />
+        <label for="SaisieIDChercheur">Identifiant chercheur : </label>
+        <input type="text" name="idChercheur" id="SaisieIDChercheur" />
     </div>
 
     <div>
