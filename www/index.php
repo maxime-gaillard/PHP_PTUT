@@ -7,16 +7,15 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-		<link rel="stylesheet" href="css.css">
+		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	</head>
 	<body>
-    <!-- Test fonctionnalités -->
-		<div class="w3-display-container background" style="width:100%; min-height:150px;">
-			<div class="w3-display-middle w3-large"><img src="logosite.png"></div>
+    	<div class="w3-display-container background" style="width:100%; min-height:150px;">
+			<div class="w3-display-middle w3-large"><img src="logo_site.png"></div>
 		</div>
         <div class="flex-container">
             <div></div>
