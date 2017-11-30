@@ -113,13 +113,13 @@
     </div>
 
     <div>
-        <p>Nom : </p>
-        <input type="text" name="nom" />
+        <p>Libelle : </p>
+        <input type="text" name="libelle" />
     </div>
 
     <div>
-        <p>Prenom : </p>
-        <input type="text" name="prenom" />
+        <p>Date : </p>
+        <input type="text" name="date" />
     </div>
 
     <div>
