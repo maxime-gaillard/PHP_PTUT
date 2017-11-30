@@ -22,7 +22,7 @@
             <div>
                 <ul>
                     <li><a href="#" class="active">Accueil</a></li>
-                    <li><a href="#">Publication</a></li>
+                    <li><a href="inscription.html">Publication</a></li>
                     <li><a href="#">Publier</a></li>
                     <li></li>
                 </ul>
