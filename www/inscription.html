@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Inscription</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--mobile-firt responsive -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+		<link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		
+		
+		<script>
+			function myFunction() {
+				$("#imageUpload").click();
+			};
+			
+			function onlyA(x) {
+			    if (x.checked) {
+					document.getElementById("A").style.visibility = "visible";
+					document.getElementById("B").style.visibility = "hidden";
+					document.getElementById("C").style.visibility = "hidden";
+			    }
+			}
+
+			function onlyB(x) {
+			    if (x.checked) {
+					document.getElementById("A").style.visibility = "hidden";
+					document.getElementById("B").style.visibility = "visible";
+					document.getElementById("C").style.visibility = "hidden";
+			    }
+			}
+			
+			function onlyC(x) {
+			    if (x.checked) {
+					document.getElementById("A").style.visibility = "hidden";
+					document.getElementById("B").style.visibility = "hidden";
+					document.getElementById("C").style.visibility = "visible";
+			    }
+			}
+		</script>
+		
+    </head>
+    <body class="w3-light-grey">
+	
+	
+		<div class="w3-display-container background" style="width:100%; min-height:150px;">
+			<div class="w3-display-middle w3-large"><img src="logosite.png"></div>
+		</div>
+        <div class="flex-container">
+            <div></div>
+            <div>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Publier</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <input type="search" name="search" placeholder="Your name..">
+            </div>
+        </div>
+		
+		<div class="row">
+			<div class="col-lg-1 col-sm-12"></div>
+			<div class="col-lg-1 col-sm-12"></div>
+			<div class="col-lg-1 col-sm-12"></div>
+			<div class="col-lg-6 col-sm-12">
+				<div id="formulaire" class="container text-center">
+					<h2 class="text-center">Inscription</h2>
+					<div class="container">
+						<div class="text-center">
+							
+							<input class="w3-radio" type="radio" name="profession" value="etudiant" checked onchange="onlyA(this)">
+							<label>Etudiant</label>
+							
+							<input class="w3-radio" type="radio" name="profession" value="chercheur">
+							<label>Chercheur</label>
+							
+							<input class="w3-radio" type="radio" name="profession" value="entreprise" >
+							<label>Entreprise</label>
+							
+							<p>
+						</div>
+					</div>
+					<form class="text-center">
+						<div class="form-group">
+							<input type="prenom" class="form-control" id="prenom" placeholder="Entrer votre prenom">
+						</div>
+						<div class="form-group">
+							<input type="nom" class="form-control" id="nom" placeholder="Entrer votre nom">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder="Entrer email">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="pwd" placeholder="Entrer password">
+						</div></br>
+						<div class="form-group" >
+							<textarea type="description" class="form-control" id="descri" placeholder="Entrer votre description" cols="10" rows="8"></textarea>
+						</div>
+						<div class="form-group" >
+							<img id="profileImage" src="octocat.png" class="img-rounded" alt="octocat !" style="max-width: 70%;" onclick="javascript:myFunction();">
+							<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+						</div>
+						<div class="form-group" >
+							<button class="w3-button w3-white w3-hover-orange">S'inscrire</button>
+						</div>
+					</form>
+					
+				</div> 
+			</div>
+			<div class="col-lg-1 col-sm-12"></div>
+			<div class="col-lg-1 col-sm-12"></div>
+			<div class="col-lg-1 col-sm-12"></div>
+		</div>
+    </body>
+</html>
