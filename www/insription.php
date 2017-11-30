@@ -18,6 +18,7 @@ try {
         $idChercheur = htmlspecialchars($_POST['idChercheur']);
         if($idChercheur == "" || is_null($idChercheur)) die();
 
+
         $req = $bdd->prepare('INSERT INTO Publication (LibelleP, Description, Date) VALUES (:LibelleP, :Description, :Date)/* SELECT * FROM Publication WHERE LibelleP LIKE ?*/');
         $req->execute(array(
             'LibelleP' => $_POST['libelle'],
