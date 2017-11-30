@@ -1,3 +1,35 @@
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+.w3-radio
+{
+	margin-left: 2em;
+}
+
+.oldWidth
+{
+	max-width: 33%;
+}
+
+.newWidth
+{
+	max-width: 66%;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
 .background{
 	background-image: url("bg.jpg");
 }
@@ -70,4 +102,3 @@ input[type=search]{
     color: white;
     border: none;
 }
-

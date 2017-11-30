@@ -94,7 +94,7 @@
 
 <h2>Test de la mise en ligne d'une publication</h2>
 
-<form action="insription.php" method="post">
+<form action="publication.php" method="post">
     <p>Quelle personne etes vous ?</p>
 
     <div>
