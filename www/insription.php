@@ -15,7 +15,6 @@ try {
 //    $descitpion = htmlspecialchars($_POST['description']);
 //    if($descitpion == "" || is_null($descitpion)) die();
 
-
     if ($type == "chercheur") {
 //        $idChercheur = htmlspecialchars($_POST['idChercheur']);
 //        if($idChercheur == "" || is_null($idChercheur)) die();
