@@ -116,7 +116,6 @@
                 <p>Prenom : </p>
                 <input type="text" name="prenom" />
             </div>
-
             <div>
                 <p>SIREN : </p>
                 <input type="text" name="siren" />
