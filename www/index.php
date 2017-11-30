@@ -1,144 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>Connexion d'un inscrit</title>
-    <meta charset="utf-8"/>
-    <style>
+	<head>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="css.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	</head>
+	<body>
+    <!-- Test fonctionnalités -->
+		<div class="w3-display-container background" style="width:100%; min-height:150px;">
+			<div class="w3-display-middle w3-large"><img src="logosite.png"></div>
+		</div>
+        <div class="flex-container">
+            <div></div>
+            <div>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Publier</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div>
+                <input type="search" name="search" placeholder="Your name..">
+            </div>
+        </div>
 
-        h2 {
-            text-align: center;
-        }
-        form {
-            margin: 0 auto;
-            width: 300px;
-            padding: 1em;
-            border: 1px solid #CCC;
-            border-radius: 1em;
-        }
+        <h2>Test de création d'un nouvel inscrit</h2>
+        <form action="testCreation.php"  method="post">
 
-        form div + div{
-            margin-top: 1em;
-        }
+            <div>
+                <label for="Nom">Nom inscrit :</label>
+                <input type="text" name="Nom" id="Nom" />
+            </div>
 
-        label {
-            display: inline-block;
-            width: 100px;
-            text-align: left;
-        }
+            <div>
+                <label for="Prenom">Prénom :</label>
+                <input type="text" name="Prenom" id="Prenom" />
+            </div>
 
-        button {
-            margin-left: 105px;
-            width: 120px;
-        }
-    </style>
-</head>
-<body>
+            <div>
+                <label for="Email">Adresse mail :</label>
+                <input type="email" name="Email" id="Email" />
+            </div>
 
-<h2>Test de création d'un nouvel inscrit</h2>
-<form action="testCreation.php"  method="post">
+            <div>
+                <label for="MotDePasse">Mot de passe :</label>
+                <input type="password" name="MotDePasse" id="MotDePasse" />
+            </div>
 
-    <div>
-        <label for="Nom">Nom inscrit :</label>
-        <input type="text" name="Nom" id="Nom" />
-    </div>
+            <div>
+                <label for="Description">Description :</label>
+                <input type="text" name="Description" id="Description" />
+            </div>
 
-    <div>
-        <label for="Prenom">Prénom :</label>
-        <input type="text" name="Prenom" id="Prenom" />
-    </div>
+            <div class="button">
+                <button type="submit">Creer</button>
+            </div>
+        </form>
 
-    <div>
-        <label for="Email">Adresse mail :</label>
-        <input type="email" name="Email" id="Email" />
-    </div>
+        <h2>Test de connexion d'un inscrit</h2>
+        <form action="testConnexion.php"  method="post">
+            <div>
+                <label for="Email1">Adresse mail :</label>
+                <input type="email" name="Email1" id="Email1" />
+            </div>
 
-    <div>
-        <label for="MotDePasse">Mot de passe :</label>
-        <input type="password" name="MotDePasse" id="MotDePasse" />
-    </div>
+            <div>
+                <label for="MotDePasse1">Mot de passe :</label>
+                <input type="password" name="MotDePasse1" id="MotDePasse1" />
+            </div>
 
-    <div>
-        <label for="Description">Description :</label>
-        <input type="text" name="Description" id="Description" />
-    </div>
+            <div class="button">
+                <button type="submit">Se connecter</button>
+            </div>
+        </form>
 
-    <div class="button">
-        <button type="submit">Creer</button>
-    </div>
-</form>
+        <h2>Test de recherche base de données</h2>
+        <form action="keyword_query.php" method="post">
+            <p>Saisir : <input type="text" name="keyword" /></p>
+            <p><input type="submit" value="Trouver"/></p>
+        </form>
 
-<h2>Test de connexion d'un inscrit</h2>
+        <h2>Test de la mise en ligne d'une publication</h2>
+        <form action="insription.php" method="post">
+            <p>Quelle personne etes vous ?</p>
 
-<form action="testConnexion.php"  method="post">
-    <div>
-        <label for="Email1">Adresse mail :</label>
-        <input type="email" name="Email1" id="Email1" />
-    </div>
+            <div>
+                <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />
+                <label for="Etudiant">Etudiant</label>
+            </div>
 
-    <div>
-        <label for="MotDePasse1">Mot de passe :</label>
-        <input type="password" name="MotDePasse1" id="MotDePasse1" />
-    </div>
+            <div>
+                <input type="radio" name="type" value="chercheur" id="Chercheur" />
+                <label for="Chercheur">Chercheur</label>
+            </div>
 
-    <div class="button">
-        <button type="submit">Se connecter</button>
-    </div>
-</form>
+            <div>
+                <input type="radio" name="type" value="entreprise" id="Entreprise" />
+                <label for="Entreprise">Entreprise</label>
+            </div>
 
-<h2>Test de recherche base de données</h2>
+            <div>
+                <p>Nom : </p>
+                <input type="text" name="nom" />
+            </div>
 
-<form action="keyword_query.php" method="post">
-    <p>Saisir : <input type="text" name="keyword" /></p>
-    <p><input type="submit" value="Trouver"/></p>
-</form>
+            <div>
+                <p>Prenom : </p>
+                <input type="text" name="prenom" />
+            </div>
 
-<h2>Test de la mise en ligne d'une publication</h2>
+            <div>
+                <p>SIREN : </p>
+                <input type="text" name="siren" />
+            </div>
 
-<form action="insription.php" method="post">
-    <p>Quelle personne etes vous ?</p>
+            <div>
+                <p>Identifiant chercheur :</Identif> : </p>
+                <input type="text" name="idChercheur" />
+            </div>
 
-    <div>
-        <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />
-        <label for="Etudiant">Etudiant</label>
-    </div>
+            <div>
+                <p>Votre message ici: </p>
+                <textarea name="description" rows="8" cols="45"></textarea>
+            </div>
 
-    <div>
-        <input type="radio" name="type" value="chercheur" id="Chercheur" />
-        <label for="Chercheur">Chercheur</label>
-    </div>
-
-    <div>
-        <input type="radio" name="type" value="entreprise" id="Entreprise" />
-        <label for="Entreprise">Entreprise</label>
-    </div>
-
-    <div>
-        <p>Nom : </p>
-        <input type="text" name="nom" />
-    </div>
-
-    <div>
-        <p>Prenom : </p>
-        <input type="text" name="prenom" />
-    </div>
-
-    <div>
-        <p>SIREN : </p>
-        <input type="text" name="siren" />
-    </div>
-
-    <div>
-        <p>Identifiant chercheur :</Identif> : </p>
-        <input type="text" name="idChercheur" />
-    </div>
-
-    <div>
-        <p>Votre message ici: </p>
-        <textarea name="description" rows="8" cols="45"></textarea>
-    </div>
-
-    <p><input type="submit" value="S'inscrire"/></p>
-</form>
-
-</body>
+            <p><input type="submit" value="S'inscrire"/></p>
+        </form>
+    </body>
 </html>
