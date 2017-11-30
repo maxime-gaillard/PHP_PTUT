@@ -4,10 +4,10 @@
     <title>Connexion d'un inscrit</title>
     <meta charset="utf-8"/>
     <style>
-
         h2 {
             text-align: center;
         }
+
         form {
             margin: 0 auto;
             width: 300px;
@@ -16,7 +16,7 @@
             border-radius: 1em;
         }
 
-        form div + div{
+        form div + div {
             margin-top: 1em;
         }
 
@@ -32,8 +32,8 @@
         }
     </style>
 </head>
-<body>
 
+<body>
 <h2>Test de création d'un nouvel inscrit</h2>
 <form action="testCreation.php"  method="post">
 
@@ -68,7 +68,6 @@
 </form>
 
 <h2>Test de connexion d'un inscrit</h2>
-
 <form action="testConnexion.php"  method="post">
     <div>
         <label for="Email1">Adresse mail :</label>
@@ -86,11 +85,9 @@
 </form>
 
 <h2>Test de recherche base de données</h2>
-
 <form action="keyword_query.php" method="post">
     <p>Saisir : <input type="text" name="keyword" /></p>
     <p><input type="submit" value="Trouver"/></p>
 </form>
-
 </body>
 </html>
