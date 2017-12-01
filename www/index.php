@@ -137,7 +137,7 @@
     <script>
         function recherche(e) {
             if(e.keyCode === 13 || e.which === 13) {
-                var url = "/keyword_query.php";
+                var url = "keyword_query.php";
                 $.post(url);
                 return false;
             }

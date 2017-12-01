@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="Suppression de la date dans les requêtes SQL.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/style.css" afterPath="$PROJECT_DIR$/www/css.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+    <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css.css" afterPath="$PROJECT_DIR$/www/css.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.php" afterPath="$PROJECT_DIR$/www/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/inscription.html" afterPath="$PROJECT_DIR$/www/inscription.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/keyword_query.php" afterPath="$PROJECT_DIR$/www/keyword_query.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +19,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="140" column="27" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
+            <state relative-caret-position="625">
+              <caret line="139" column="27" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -32,8 +29,8 @@
       <file leaf-file-name="keyword_query.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <marker date="1512124507797" expanded="true" signature="651:698" ph="SELECT * FRO... Publication" />
               </folding>
@@ -244,7 +241,7 @@
       <updated>1512035195297</updated>
       <workItem from="1512035198734" duration="4030000" />
       <workItem from="1512052857284" duration="830000" />
-      <workItem from="1512123676549" duration="869000" />
+      <workItem from="1512123676549" duration="1172000" />
     </task>
     <task id="LOCAL-00001" summary="Fichier au bon endroit">
       <created>1512035379562</created>
@@ -295,11 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512053462723</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Appel de keyword_query.php dans un input">
+      <created>1512124563370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1512124563370</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5999000" />
+    <option name="totallyTimeSpent" value="6302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1680" height="1002" extended-state="0" />
@@ -339,7 +343,8 @@
     <MESSAGE value="Mise en forme formulaire mise en ligne publication" />
     <MESSAGE value="Ajout des formulaires dans le bon style" />
     <MESSAGE value="Fichiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fichiers" />
+    <MESSAGE value="Appel de keyword_query.php dans un input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Appel de keyword_query.php dans un input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <marker date="1512124507797" expanded="true" signature="651:698" ph="SELECT * FRO... Publication" />
           </folding>
@@ -769,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="140" column="27" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
+        <state relative-caret-position="625">
+          <caret line="139" column="27" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
           <folding />
         </state>
       </provider>
