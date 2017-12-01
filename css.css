@@ -1,0 +1,110 @@
+.background{
+	background-image: url("bg.jpg");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin:0 auto;
+    padding: 0;
+    text-align: center;
+    width: auto;
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+a {
+    display:inline-block;
+    margin-right: -5px;
+    width:120px;
+    font-weight:bold;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+    color: black;
+    background-color: white;
+}
+
+a active{
+    background-color: orange;
+}
+
+a:hover {
+    background-color: orange;
+    color: white;
+    text-decoration:none;
+}
+
+.flex-container {
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-between;
+}
+
+.flex-container>div {
+    width: 50%;
+    height: 2em;
+}
+
+.flex-container>div:first-child {
+    width: 20%;
+    height: 2em;
+}
+
+.flex-container>div:last-child {
+    width: 20%;
+    height: 2em;
+}
+
+input[type=search]{
+    float:right;
+    color: black;
+    height: 2em !important;
+    margin: 0px !important;
+    background-color: white;
+    border: none;
+    width: 15.6em;
+}
+
+#modalConnexion{
+    height: 6em;
+    width: 15.6em;
+    background-color: white;
+    visibility: hidden;
+}
+
+input[type=email]{
+    height: 2em;
+    margin: 0px !important;
+    padding: 0px 5px 0px 5px;
+}
+
+input[type=password]{
+    height: 2em;
+    margin: 0px !important;
+    padding: 0px 5px 0px 5px;
+}
+
+#valider{
+    float: right;
+    height: 2em;
+}
+
+.active{
+    background-color: orange;
+    color: white;
+}
+
+#etudiant{
+    display: block;
+}
+
+#chercheur, #entreprise1, #entreprise2{
+    display: none;
+}
