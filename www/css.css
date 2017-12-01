@@ -69,12 +69,12 @@ input[type=search]{
     margin: 0px !important;
     background-color: white;
     border: none;
-    width: 20%;
+    width: 15.6em;
 }
 
 #modalConnexion{
-    height: 8em;
-    width: 20%;
+    height: 6em;
+    width: 15.6em;
     background-color: white;
     visibility: hidden;
 }
@@ -94,4 +94,17 @@ input[type=password]{
 #valider{
     float: right;
     height: 2em;
+}
+
+.active{
+    background-color: orange;
+    color: white;
+}
+
+#etudiant{
+    display: block;
+}
+
+#chercheur, #entreprise1, #entreprise2{
+    display: none;
 }
