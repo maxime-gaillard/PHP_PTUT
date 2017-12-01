@@ -12,7 +12,7 @@ try {
     $keyword = htmlspecialchars($_POST['keyword']);
     if($keyword == "" || is_null($keyword)) die();
 
-    $req = $bdd->prepare('SELECT * FROM Publication WHERE LibelleP LIKE ?');
+    $req = $bdd->prepare('SELECT * FROM PublicationPublique, PublicationPrivee WHERE LibelleP LIKE ?');
     $req->execute(array('%' . $keyword . '%')); // % to get completion
 
     while ($data = $req->fetch()) {
