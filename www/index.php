@@ -44,7 +44,7 @@
     <div>
         <form action="keyword_query.php" method="post">
         <input id="recherchePublication" type="search" name="search" placeholder="Rechercher...">
-    </form>
+        </form>
     </div>
 </div>
 <script>
