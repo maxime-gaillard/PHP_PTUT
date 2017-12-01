@@ -25,7 +25,6 @@ try {
 
     if (!$resultat) {
         $req = $bdd->prepare('INSERT INTO PublicationPublique (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
-
     }
 
 
