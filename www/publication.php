@@ -12,7 +12,6 @@ try {
     if($descitpion == "" || is_null($descitpion)) die();
 
 //    if ($type == "chercheur") {
-
 //        $idChercheur = htmlspecialchars($_POST['idChercheur']);
 //        if($idChercheur == "" || is_null($idChercheur)) die();
 
@@ -27,14 +26,12 @@ try {
         $req = $bdd->prepare('INSERT INTO PublicationPublique (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
     }
 
-
     $req = $bdd->prepare('INSERT INTO Publication (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
     $req->execute(array(
         'LibelleP' => $_POST['titre'],
         'Description' => $_POST['description']) ) or die ( print_r($req->errorInfo())) ;
 
     echo 'Une nouvelle publication a été ajoutée !';
-
 
 //    } elseif ($type == "entreprise") {
 //        $siren = htmlspecialchars($_POST['siren']);
