@@ -13,129 +13,55 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	</head>
-
 	<body>
-    	<div class="w3-display-container background" style="width:100%; min-height:150px;">
-			<div class="w3-display-middle w3-large"><img src="logo_site.png"></div>
+		<div class="w3-display-container background" style="width: 100%; min-height: 150px;">
+			<div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
+                <img src="logosite.png" style="height: 8em;">
+            </div>
+            <div class="w3-display-bottomright" id="options">
+                <div>
+                    <ul>
+                        <li><a href="#">S'inscrire</a></li>
+                        <li><a href="#" id="connexion">Connexion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="modalConnexion" class="w3-display-right">
+                <input type="email" name="mail" placeholder="Email">
+                <input type="password" name="mdp" placeholder="Mot de passe">
+                <a href="#" id="valider">Valider</a>
+            </div>
 		</div>
         <div class="flex-container">
             <div></div>
             <div>
                 <ul>
                     <li><a href="#" class="active">Accueil</a></li>
-                    <li><a href="inscription.html">Publication</a></li>
+                    <li><a href="#">Publication</a></li>
                     <li><a href="#">Publier</a></li>
-                    <li></li>
                 </ul>
             </div>
-            <div>
-                <form action="keyword_query.php" method="post">
+
+	    <div>
+        	<form action="keyword_query.php" method="post">
                     <input id="recherchePublication" type="search" name="search" placeholder="Rechercher...">
                 </form>
             </div>
+
+            <!--<div>
+                <input id="input" type="search" name="search" placeholder="Chercher...">
+            </div>-->
         </div>
-
-        <h2>Test de création d'un nouvel inscrit</h2>
-        <form action="testCreation.php"  method="post">
-
-            <div>
-                <label for="Nom">Nom inscrit :</label>
-                <input type="text" name="Nom" id="Nom" />
-            </div>
-
-            <div>
-                <label for="Prenom">Prénom :</label>
-                <input type="text" name="Prenom" id="Prenom" />
-            </div>
-
-            <div>
-                <label for="Email">Adresse mail :</label>
-                <input type="email" name="Email" id="Email" />
-            </div>
-
-            <div>
-                <label for="MotDePasse">Mot de passe :</label>
-                <input type="password" name="MotDePasse" id="MotDePasse" />
-            </div>
-
-            <div>
-                <label for="Description">Description :</label>
-                <input type="text" name="Description" id="Description" />
-            </div>
-
-            <div class="button">
-                <button type="submit">Creer</button>
-            </div>
-        </form>
-
-        <h2>Test de connexion d'un inscrit</h2>
-        <form action="testConnexion.php"  method="post">
-            <div>
-                <label for="Email1">Adresse mail :</label>
-                <input type="email" name="Email1" id="Email1" />
-            </div>
-
-            <div>
-                <label for="MotDePasse1">Mot de passe :</label>
-                <input type="password" name="MotDePasse1" id="MotDePasse1" />
-            </div>
-
-            <div class="button">
-                <button type="submit">Se connecter</button>
-            </div>
-        </form>
-
-        <h2>Test de la mise en ligne d'une publication</h2>
-        <form action="publication.php" method="post">
-            <p>Quelle personne etes vous ?</p>
-
-<!--            <div>-->
-<!--                <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked" />-->
-<!--                <label for="Etudiant">Etudiant</label>-->
-<!--            </div>-->
-<!---->
-<!--            <div>-->
-<!--                <input type="radio" name="type" value="chercheur" id="Chercheur" />-->
-<!--                <label for="Chercheur">Chercheur</label>-->
-<!--            </div>-->
-<!---->
-<!--            <div>-->
-<!--                <input type="radio" name="type" value="entreprise" id="Entreprise" />-->
-<!--                <label for="Entreprise">Entreprise</label>-->
-<!--            </div>-->
-
-            <div>
-                <p>Titre : </p>
-                <input type="text" name="titre" />
-            </div>
-
-            <div>
-                <p>Date : </p>
-                <input type="text" name="date" />
-            </div>
-            <div>
-                <p>Description : </p>
-                <input type="text" name="description" />
-            </div>
-
-<!--            <div>-->
-<!--                <p>Identifiant chercheur :</Identif> : </p>-->
-<!--                <input type="text" name="idChercheur" />-->
-<!--            </div>-->
-
-            <div>
-                <p>Votre message ici: </p>
-                <textarea name="description" rows="8" cols="45"></textarea>
-            </div>
-
-            <p><input type="submit" value="S'inscrire"/></p>
-        </form>
-
-    <!--<script>
-        var input = document.getElementById('recherchePublication');
-        input.addEventListener('keyup', function () {
-            ;
-        })
-    </script>-->
-    </body>
+        <script>
+            var connexion = document.getElementById('connexion');
+            connexion.onclick = function() {
+                document.getElementById("modalConnexion").style.visibility = "visible";
+                document.getElementById("options").style.visibility = "hidden";
+            };
+            var input = document.getElementById("input");
+            input.addEventListener('keyup',function(){
+                alert(input.value);
+            });
+        </script>
+	</body>
 </html>
