@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Inscription</title>
-        <meta charset="utf-8">
+	<head>
+		<title>Publier</title>
+		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,8 +10,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    </head>
-    <body class="w3-light-grey">
+	</head>
+	<body class="w3-light-grey">
         <div class="w3-display-container background" style="width: 100%; min-height: 150px;">
             <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
                 <img src="logosite.png" style="height: 8em;">
@@ -19,7 +19,7 @@
             <div class="w3-display-bottomright" id="options">
                 <div>
                     <ul>
-                        <li><a href="inscription.html" class="active">S'inscrire</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
                         <li><a href="#" id="connexion">Connexion</a></li>
                     </ul>
                 </div>
@@ -36,7 +36,7 @@
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="#">Publication</a></li>
-                    <li><a href="publier.html">Publier</a></li>
+                    <li><a href="publier.html" class="active">Publier</a></li>
                 </ul>
             </div>
             <div>
@@ -49,43 +49,25 @@
             <div class="col-lg-1 col-sm-12"></div>
             <div class="col-lg-6 col-sm-12">
                 <div id="formulaire" class="container text-center">
-                    <h2 class="text-center">Inscription</h2>
-                    <div class="container">
-                        <div class="text-center">
-                            <form>
-                                <input id="radioEtudiant" class="w3-radio" type="radio" name="etude" value="etudiant" checked>
-                                <label>Etudiant</label>
-                                <input id="radioChercheur" class="w3-radio" type="radio" name="profession" value="chercheur">
-                                <label>Chercheur</label>
-                                <input id="radioEntreprise" class="w3-radio" type="radio" name="type" value="entreprise">
-                                <label>Entreprise</label>
-                            </form>
-                        </div>
-                    </div>
+                    <h2 class="text-center">Publication</h2>
                     <form class="text-center">
                         <div class="form-group" >
-                            <input type="text" class="form-control" placeholder="Prénom">
+                            <input type="text" class="form-control" placeholder="Titre">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nom">
+                            <input type="date" class="form-control" placeholder="Date">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Ville de départ">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Mot de passe">
+                            <input type="text" class="form-control" placeholder="Ville d'arrivée">
                         </div>
                         <div class="form-group" >
-                            <input  id="etudiant" type="number" class="form-control" placeholder="N° étudiant">
+                            <input  type="number" class="form-control" placeholder="Capacité">
                         </div>
                         <div class="form-group" >
-                            <input id="chercheur" type="number" class="form-control" placeholder="N° chercheur">
-                        </div>
-                        <div class="form-group" >
-                            <input id="entreprise1" type="number" class="form-control" placeholder="SIREN">
-                        </div>
-                        <div class="form-group" >
-                            <input id="entreprise2" type="text" class="form-control" placeholder="Nom enterprise">
+                            <input type="number" class="form-control" placeholder="Prix">
                         </div>
                         <div class="form-group" >
                             <textarea class="form-control" placeholder="Description" cols="10" rows="8"></textarea>
@@ -104,7 +86,7 @@
             <div class="col-lg-1 col-sm-12"></div>
             <div class="col-lg-1 col-sm-12"></div>
         </div>
-        <script>
+		<script>
             var connexion = document.getElementById('connexion');
             connexion.onclick = function() {
                 document.getElementById("modalConnexion").style.visibility = "visible";
@@ -114,40 +96,6 @@
             input.addEventListener('keyup',function(){
                 alert(input.value);
             });
-            var etudiant = document.getElementById("radioEtudiant");
-            var entreprise = document.getElementById("radioEntreprise");
-            var chercheur = document.getElementById("radioChercheur");
-            etudiant.onclick = function(){
-                document.getElementById('etudiant').style.display = 'block';
-                document.getElementById('chercheur').style.display = 'none';
-                document.getElementById('entreprise1').style.display = 'none';
-                document.getElementById('entreprise2').style.display = 'none';
-                entreprise.checked = false;
-                chercheur.checked = false;
-                etudiant.checked = true;
-                document.getElementById("flex-container").style.backgroundColor = red;
-                alert("coucou");
-            }
-            chercheur.onchange = function(){
-                document.getElementById('etudiant').style.display = 'none';
-                document.getElementById('chercheur').style.display = 'block';
-                document.getElementById('entreprise1').style.display = 'none';
-                document.getElementById('entreprise2').style.display = 'none';
-                entreprise.checked = false;
-                chercheur.checked = true;
-                etudiant.checked = false;
-                document.getElementById("flex-container").style.backgroundColor = red;
-            }
-            entreprise.onchange = function(){
-                document.getElementById('etudiant').style.display = 'none';
-                document.getElementById('chercheur').style.display = 'none';
-                document.getElementById('entreprise1').style.display = 'block';
-                document.getElementById('entreprise2').style.display = 'block';
-                entreprise.checked = true;
-                chercheur.checked = false;
-                etudiant.checked = false;
-                document.getElementById("flex-container").style.backgroundColor = red;
-            }
-        </script>
-    </body>
+		</script>
+	</body>
 </html>
