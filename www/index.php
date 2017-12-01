@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div>
-                <input type="search" name="search" placeholder="Your name..">
+                <input id="recherchePublication" onkeypress="return recherche(event)" type="search" name="search" placeholder="Your name..">
             </div>
         </div>
 
@@ -133,5 +133,15 @@
 
             <p><input type="submit" value="S'inscrire"/></p>
         </form>
+
+    <script>
+        function recherche(e) {
+            if(e.keyCode === 13 || e.which === 13) {
+                var url = "/keyword_query.php";
+                $.post(url);
+                return false;
+            }
+        }
+    </script>
     </body>
 </html>
