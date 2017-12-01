@@ -13,6 +13,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	</head>
+
 	<body>
     	<div class="w3-display-container background" style="width:100%; min-height:150px;">
 			<div class="w3-display-middle w3-large"><img src="logo_site.png"></div>
@@ -28,7 +29,9 @@
                 </ul>
             </div>
             <div>
-                <input id="recherchePublication" onkeypress="return recherche(event)" type="search" name="search" placeholder="Your name..">
+                <form action="keyword_query.php" method="post">
+                    <input id="recherchePublication" type="search" name="search" placeholder="Rechercher...">
+                </form>
             </div>
         </div>
 
@@ -82,12 +85,6 @@
             </div>
         </form>
 
-        <h2>Test de recherche base de données</h2>
-        <form action="keyword_query.php" method="post">
-            <p>Saisir : <input type="text" name="keyword" /></p>
-            <p><input type="submit" value="Trouver"/></p>
-        </form>
-
         <h2>Test de la mise en ligne d'une publication</h2>
         <form action="publication.php" method="post">
             <p>Quelle personne etes vous ?</p>
@@ -134,14 +131,11 @@
             <p><input type="submit" value="S'inscrire"/></p>
         </form>
 
-    <script>
-        function recherche(e) {
-            if(e.keyCode === 13 || e.which === 13) {
-                var url = "keyword_query.php";
-                $.post(url);
-                return false;
-            }
-        }
-    </script>
+    <!--<script>
+        var input = document.getElementById('recherchePublication');
+        input.addEventListener('keyup', function () {
+            ;
+        })
+    </script>-->
     </body>
 </html>
