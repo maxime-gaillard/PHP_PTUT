@@ -18,20 +18,14 @@ try {
 
     $id = $_SESSION['NumInscrit'];
 
-    $req1 = $bdd->prepare('SELECT * FROM Chercheur WHERE Email LIKE ?');
+    $req1 = $bdd->prepare('SELECT * FROM Chercheur WHERE idC LIKE ?');
     $req1->execute(array('%' . $id . '%'));
 
-    $req2 = $bdd->prepare('SELECT * FROM Chercheur WHERE Email LIKE ?');
-    $req2->execute(array('%' . $id . '%'));
+    $resultat = $req->fetch();
 
-    $req3 = $bdd->prepare('SELECT * FROM Chercheur WHERE Email LIKE ?');
-    $req3->execute(array('%' . $id . '%'));
+    if (!$resultat) {
+        $req = $bdd->prepare('INSERT INTO PublicationPublique (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
 
-    if ($req1 != null) {
-        $req = $bdd->prepare('INSERT INTO Publication (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
-
-    } elseif ($req2 != null) {
-        $req = $bdd->prepare('INSERT INTO Publication (LibelleP, DescriptionP) VALUES (:LibelleP, :Description)');
     }
 
 
