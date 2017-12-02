@@ -12,7 +12,20 @@ try {
     $keyword = htmlspecialchars($_POST['keyword']);
     if($keyword == "" || is_null($keyword)) die();
 
-    $req = $bdd->prepare('SELECT * FROM PublicationPublique, PublicationPrivee WHERE LibelleP LIKE ?');
+    if(is_null($_SESSION['NumInscrit'])) {
+        echo "Vous n'etes pas connecte !";
+        die();
+    }
+
+    $req = $bdd->prepare('SELECT * FROM Entreprise WHERE NumE LIKE ?');
+    $req->execute($_SESSION['NumInscrit']);
+
+    if($req) {
+        $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibelleP LIKE ?');
+    }
+    else {
+        $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibelleP LIKE ?');
+    }
     $req->execute(array('%' . $keyword . '%')); // % to get completion
 
     while ($data = $req->fetch()) {
