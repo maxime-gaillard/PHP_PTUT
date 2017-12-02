@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/www/inscription.html" afterPath="$PROJECT_DIR$/www/inscription.html" />
-      <change beforePath="$PROJECT_DIR$/www/publier.html" afterPath="$PROJECT_DIR$/www/publier.html" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change beforePath="$PROJECT_DIR$/www/keyword_query.php" afterPath="$PROJECT_DIR$/www/keyword_query.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,71 +15,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/inscription.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="117" column="17" lean-forward="false" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publier.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/publier.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publication.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/publication.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <marker date="1512205888795" expanded="true" signature="746:786" ph="SELECT * FRO... Chercheur" />
-                <marker date="1512205888795" expanded="true" signature="919:1008" ph="INSERT INTO PublicationPublique... " />
-                <marker date="1512205888795" expanded="true" signature="1047:1128" ph="INSERT INTO Publication... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keyword_query.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="keyword_query.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="704">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-                <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-                <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testConnexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/testConnexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-              <folding>
-                <marker date="1512205888795" expanded="true" signature="252:316" ph="SELECT NumIn... Inscrit" />
+                <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+                <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+                <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
               </folding>
             </state>
           </provider>
@@ -97,10 +41,10 @@
         <option value="$PROJECT_DIR$/www/Page web.html" />
         <option value="$PROJECT_DIR$/www/publication.php" />
         <option value="$PROJECT_DIR$/www/index.php" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/keyword_query.php" />
         <option value="$PROJECT_DIR$/www/publier.html" />
         <option value="$PROJECT_DIR$/www/inscription.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/keyword_query.php" />
       </list>
     </option>
   </component>
@@ -109,6 +53,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds" extendedState="6">
@@ -268,7 +215,7 @@
       <workItem from="1512035198734" duration="4030000" />
       <workItem from="1512052857284" duration="830000" />
       <workItem from="1512123676549" duration="2457000" />
-      <workItem from="1512205904621" duration="1550000" />
+      <workItem from="1512205904621" duration="2210000" />
     </task>
     <task id="LOCAL-00001" summary="Fichier au bon endroit">
       <created>1512035379562</created>
@@ -368,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512207365561</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Rechercher sur les autres pages">
+      <created>1512207461368</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1512207461368</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9137000" />
+    <option name="totallyTimeSpent" value="9797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -463,9 +417,9 @@
         <state relative-caret-position="306">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -508,9 +462,9 @@
         <state relative-caret-position="221">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -552,9 +506,9 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -592,9 +546,9 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -657,9 +611,9 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -763,35 +717,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
+    <entry file="file://$PROJECT_DIR$/www/inscription.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <marker date="1512207173094" expanded="true" signature="759:801" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512207173094" expanded="true" signature="895:948" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512207173094" expanded="true" signature="999:1054" ph="SELECT * FRO... PublicationPublique" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="7" lean-forward="true" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        <state relative-caret-position="2358">
+          <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/publication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1512205888795" expanded="true" signature="746:786" ph="SELECT * FRO... Chercheur" />
-            <marker date="1512205888795" expanded="true" signature="919:1008" ph="INSERT INTO PublicationPublique... " />
-            <marker date="1512205888795" expanded="true" signature="1047:1128" ph="INSERT INTO Publication... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,11 +733,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/inscription.html">
+    <entry file="file://$PROJECT_DIR$/www/publication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="117" column="17" lean-forward="false" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
+        <state relative-caret-position="648">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1512205888795" expanded="true" signature="746:786" ph="SELECT * FRO... Chercheur" />
+            <marker date="1512205888795" expanded="true" signature="919:1008" ph="INSERT INTO PublicationPublique... " />
+            <marker date="1512205888795" expanded="true" signature="1047:1128" ph="INSERT INTO Publication... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <marker date="1512208007711" expanded="true" signature="818:860" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512208007711" expanded="true" signature="954:1007" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512208007711" expanded="true" signature="1058:1113" ph="SELECT * FRO... PublicationPublique" />
+          </folding>
         </state>
       </provider>
     </entry>

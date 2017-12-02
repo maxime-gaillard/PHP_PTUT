@@ -9,8 +9,11 @@ try {
     // $req = $bdd->query("SELECT * FROM Publication WHERE LibelleP LIKE '%".$keyword."%'");
     // This instruction has low security regarding SQL injection, we use prepare and execute instead.
 
-    $keyword = htmlspecialchars($_POST['keyword']);
-    if($keyword == "" || is_null($keyword)) die();
+    $keyword = htmlspecialchars($_POST['search']);
+    if($keyword == "" || is_null($keyword)) {
+        echo "Valeur de recherche nulle !";
+        die();
+    }
 
     if(is_null($_SESSION['NumInscrit'])) {
         echo "Vous n'etes pas connecte !";
@@ -28,18 +31,15 @@ try {
     }
     $req->execute(array('%' . $keyword . '%')); // % to get completion
 
+    echo "Resultats de la recherche : <br/><br/>";
+
     while ($data = $req->fetch()) {
-        ?> <strong>
+        echo "<strong>";
+        echo $data['LibelleP'];
+        echo "</strong><br/>";
 
-            <?php
-            echo $data['LibelleP'];
-            ?> </strong><br/>
-
-        <?php
         echo $data['DescriptionP'];
-        ?> <br/><br/>
-
-        <?php
+        echo "<br/><br/>";
     }
 
     $req->closeCursor();
