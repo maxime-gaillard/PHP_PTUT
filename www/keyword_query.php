@@ -9,35 +9,37 @@ try {
     // $req = $bdd->query("SELECT * FROM Publication WHERE LibelleP LIKE '%".$keyword."%'");
     // This instruction has low security regarding SQL injection, we use prepare and execute instead.
 
-    $keyword = htmlspecialchars($_POST['keyword']);
-    if($keyword == "" || is_null($keyword)) die();
+    $keyword = htmlspecialchars($_POST['search']);
+    if($keyword == "" || is_null($keyword)) {
+        echo "Valeur de recherche nulle !";
+        die();
+    }
 
-    $id = $_SESSION['NumInscrit'];
+    if(is_null($_SESSION['NumInscrit'])) {
+        echo "Vous n'etes pas connecte !";
+        die();
+    }
 
-    $req = $bdd->prepare('SELECT * FROM Chercheur WHERE IdC LIKE ?');
-    $req->execute($id);
+    $req = $bdd->prepare('SELECT * FROM Entreprise WHERE NumE LIKE ?');
+    $req->execute($_SESSION['NumInscrit']);
 
-    if(! $req) {
-        $req = $bdd->prepare('SELECT * FROM PublicationPrivee   WHERE LibelleP LIKE ?');
+    if($req) {
+        $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibelleP LIKE ?');
     }
     else {
         $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibelleP LIKE ?');
     }
-
     $req->execute(array('%' . $keyword . '%')); // % to get completion
 
+    echo "Resultats de la recherche : <br/><br/>";
+
     while ($data = $req->fetch()) {
-        ?> <strong>
+        echo "<strong>";
+        echo $data['LibelleP'];
+        echo "</strong><br/>";
 
-            <?php
-            echo $data['LibelleP'];
-            ?> </strong><br/>
-
-        <?php
         echo $data['DescriptionP'];
-        ?> <br/><br/>
-
-        <?php
+        echo "<br/><br/>";
     }
 
     $req->closeCursor();

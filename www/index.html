@@ -42,7 +42,9 @@
                 </ul>
             </div>
             <div>
-                <input id="input" type="search" name="search" placeholder="Chercher...">
+                <form action="keyword_query.php" action="post">
+                    <input type="search" name="search" placeholder="Chercher...">
+                </form>
             </div>
         </div>
         <script>
@@ -51,10 +53,10 @@
                 document.getElementById("modalConnexion").style.visibility = "visible";
                 document.getElementById("options").style.visibility = "hidden";
             };
-            var input = document.getElementById("input");
+            /*var input = document.getElementById("input");
             input.addEventListener('keyup',function(){
                 alert(input.value);
-            });
+            });*/
         </script>
 	</body>
 </html>
