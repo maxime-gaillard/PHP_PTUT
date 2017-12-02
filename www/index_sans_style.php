@@ -35,7 +35,7 @@
 <body>
 
 <h2>Test de création d'un nouvel inscrit</h2>
-<form action="testCreation.php"  method="post">
+<form action="creation.php" method="post">
 
     <div>
         <label for="Nom">Nom inscrit :</label>
@@ -69,7 +69,7 @@
 
 <h2>Test de connexion d'un inscrit</h2>
 
-<form action="testConnexion.php"  method="post">
+<form action="connexion.php" method="post">
     <div>
         <label for="Email1">Adresse mail :</label>
         <input type="email" name="Email1" id="Email1" />
