@@ -12,18 +12,7 @@ try {
     $keyword = htmlspecialchars($_POST['keyword']);
     if($keyword == "" || is_null($keyword)) die();
 
-    $id = $_SESSION['NumInscrit'];
-
-    $req = $bdd->prepare('SELECT * FROM Chercheur WHERE IdC LIKE ?');
-    $req->execute($id);
-
-    if(! $req) {
-        $req = $bdd->prepare('SELECT * FROM PublicationPrivee   WHERE LibelleP LIKE ?');
-    }
-    else {
-        $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibelleP LIKE ?');
-    }
-
+    $req = $bdd->prepare('SELECT * FROM Publication WHERE LibelleP LIKE ?');
     $req->execute(array('%' . $keyword . '%')); // % to get completion
 
     while ($data = $req->fetch()) {
