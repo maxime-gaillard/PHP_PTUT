@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div>
-                <input id="recherchePublication" onkeypress="return recherche(event)" type="search" name="search" placeholder="Your name..">
+                <!--<input id="recherchePublication" onkeypress="return recherche(event)" type="search" name="search" placeholder="Your name..">-->
             </div>
         </div>
 
