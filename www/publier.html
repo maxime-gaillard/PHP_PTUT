@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="css.css">
 
 	<script>
 		function myFunction() {
@@ -18,7 +17,7 @@
 	</script>
 
 </head>
-<body>
+<body class="w3-light-grey">
 	<div class="w3-display-container background" style="width:100%; min-height:150px;">
 	<div class="w3-display-middle w3-large"><img src="logo_site.png"></div>
 	    <div class="w3-display-bottomright">
@@ -34,9 +33,9 @@
             <div></div>
             <div>
                 <ul>
-                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="#">Publication</a></li>
-                    <li><a href="publier.html">Publier</a></li>
+                    <li><a href="publier.html" class="active">Publier</a></li>
                     <li></li>
                 </ul>
             </div>
@@ -49,41 +48,35 @@
 
 	<div class="container center-div">
 	    <div class="row" id="formulaire">
-			<form role="form" class="col-md-8 go-right col-md-offset-2" id="fumu">
-				<h2>Publication</h2>
+			<form role="form" action="publication.php" method="post" class="col-md-8 go-right col-md-offset-2">
+				<h2 class="text-center" >Publication</h2>
 				<div class="form-group">
-					<input id="titre" name="titre" type="text" class="form-control" required>
-					<label for="name">Titre</label>
+					<input id="titre" name="titre" placeholder="Titre" type="text" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<input id="date" name="date" type="date" class="form-control" required>
-					<label class="date" for="phone">Date</label>
 				</div>
 				<div class="form-group">
-					<input id="villedepart" name="villedepart" type="text" class="form-control" required>
-					<label for="phone">Ville de départ</label>
+					<input id="villedepart" name="villedepart" placeholder="Ville de départ" type="text" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<input id="villearrivée" name="villearrivée" type="text" class="form-control" required>
-					<label for="phone">Ville d'arrivée</label>
+					<input id="villearrivée" name="villearrivée" placeholder="Ville d'arrivée" type="text" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<input id="capacité" name="capacité" type="number" class="form-control" required>
-					<label for="phone">Capacité</label>
+					<input id="capacité" name="capacité" placeholder="Capacité" type="number" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<input id="prix" name="prix" type="number" class="form-control" required>
-					<label for="phone">Prix</label>
+					<input id="prix" name="prix" type="number" placeholder="Prix" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<textarea id="description" name="description" class="form-control" required></textarea>
-					<label for="description">Description</label>
+					<textarea id="description" name="description" placeholder="Description" class="form-control" required></textarea>
 				</div>
-				<h3>Photo :</h3>
+				<!--<h3>Photo :</h3>
 
 				<img id="profileImage" src="Octocat.png" class="img-rounded" alt="octocat !" style="max-width: 70%;" onclick="javascript:myFunction();">
-				<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-				<button id="valider" type="button" class="btn btn-default center-block col-md-8 col-md-offset-2 ">Valider</button>
+				<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>-->
+				<input id="valider" type="submit" value="valider" class="w3-button w3-white w3-hover-orange"/>
+				<!--<button id="valider" type="button" class="btn btn-default center-block col-md-8 col-md-offset-2 ">Valider</button>-->
 			</form>
 		</div>
 	</div>
