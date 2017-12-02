@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/connexion.php" afterPath="$PROJECT_DIR$/www/connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css.css" afterPath="$PROJECT_DIR$/www/css.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/inscription.html" afterPath="$PROJECT_DIR$/www/inscription.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/publier.html" afterPath="$PROJECT_DIR$/www/publier.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/inscription.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -122,7 +118,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publier.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="publier.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/publier.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -338,7 +334,7 @@
       <workItem from="1512123676549" duration="2457000" />
       <workItem from="1512205904621" duration="2210000" />
       <workItem from="1512244732821" duration="1559000" />
-      <workItem from="1512246329522" duration="11060000" />
+      <workItem from="1512246329522" duration="11199000" />
     </task>
     <task id="LOCAL-00001" summary="Fichier au bon endroit">
       <created>1512035379562</created>
@@ -459,11 +455,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512254283640</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="La connexion d'un isnscrit est fonctionnelle.">
+      <created>1512257705241</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1512257705241</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22416000" />
+    <option name="totallyTimeSpent" value="22555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -512,7 +515,8 @@
     <MESSAGE value="Rechercher sur les autres pages" />
     <MESSAGE value="Liaison frontend backend pour la création d'un inscrit." />
     <MESSAGE value="La création d'un isnscrit dans les tables filles est fonctionnelle." />
-    <option name="LAST_COMMIT_MESSAGE" value="La création d'un isnscrit dans les tables filles est fonctionnelle." />
+    <MESSAGE value="La connexion d'un isnscrit est fonctionnelle." />
+    <option name="LAST_COMMIT_MESSAGE" value="La connexion d'un isnscrit est fonctionnelle." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -876,16 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <marker date="1512256165829" expanded="true" signature="252:315" ph="SELECT NumIn... Inscrit" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/publication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -914,14 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index_sans_style.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
@@ -934,6 +920,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <marker date="1512256165829" expanded="true" signature="252:315" ph="SELECT NumIn... Inscrit" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/inscription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding />
         </state>
       </provider>
