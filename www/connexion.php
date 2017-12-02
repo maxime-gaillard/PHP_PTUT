@@ -9,9 +9,9 @@ catch (Exception $e)
     die('Erreur de connexion : ' . $e->getMessage());
 }
 
-$req = $bdd->prepare('SELECT NumInscrit, MotDePasse FROM Inscrit WHERE Email = :Email1');
+$req = $bdd->prepare('SELECT NumInscrit, MotDePasse FROM Inscrit WHERE Email = :Email');
 
-$req->execute(array('Email1' => $_POST['Email1']));
+$req->execute(array('Email' => $_POST['Email']));
 
 $resultat = $req->fetch();
 
@@ -21,10 +21,10 @@ if (!$resultat)
 }
 else
 {
-    if (password_verify($_POST['MotDePasse1'], $resultat['MotDePasse'])) {
+    if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
         session_start();
         $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
-        $_SESSION['Email1'] = $_POST['Email1'];
+        $_SESSION['Email'] = $_POST['Email'];
         echo 'Vous êtes connecté !';
     }
     else {
@@ -32,5 +32,6 @@ else
     }
 }
 
+//header('Location:index.html');
 $bdd = null;
 ?>

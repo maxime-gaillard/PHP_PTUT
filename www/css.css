@@ -92,6 +92,15 @@ input[type=password]{
 }
 
 #valider{
+    display:inline-block;
+    margin-right: -5px;
+    width:120px;
+    font-weight:bold;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+    color: black;
+    background-color: white;
     float: right;
     height: 2em;
 }
