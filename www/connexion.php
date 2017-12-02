@@ -31,4 +31,6 @@ else
         echo 'Mauvais mot de passe !';
     }
 }
+
+$bdd = null;
 ?>

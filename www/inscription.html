@@ -1,155 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Inscription</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="css.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    </head>
-    <body class="w3-light-grey">
-        <div class="w3-display-container background" style="width: 100%; min-height: 150px;">
-            <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
-                <img src="logosite.png" style="height: 8em;">
-            </div>
-            <div class="w3-display-bottomright" id="options">
-                <div>
-                    <ul>
-                        <li><a href="inscription.html" class="active">S'inscrire</a></li>
-                        <li><a href="#" id="connexion">Connexion</a></li>
-                    </ul>
+<head>
+    <title>Inscription</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</head>
+<body class="w3-light-grey">
+<div class="w3-display-container background" style="width: 100%; min-height: 150px;">
+    <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
+        <img src="logosite.png" style="height: 8em;">
+    </div>
+    <div class="w3-display-bottomright" id="options">
+        <div>
+            <ul>
+                <li><a href="inscriptionOLD.html" class="active">S'inscrire</a></li>
+                <li><a href="#" id="connexion">Connexion</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="modalConnexion" class="w3-display-right">
+        <input class="banner" type="email" name="mail" placeholder="Email">
+        <input class="banner" type="password" name="mdp" placeholder="Mot de passe">
+        <a href="#" id="valider">Valider</a>
+    </div>
+</div>
+<div class="flex-container">
+    <div></div>
+    <div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Publication</a></li>
+            <li><a href="publier.html">Publier</a></li>
+        </ul>
+    </div>
+    <div>
+        <form action="keyword_query.php" method="post">
+            <input id="input" type="search" name="search" placeholder="  Chercher...">
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-1 col-sm-12"></div>
+    <div class="col-lg-1 col-sm-12"></div>
+    <div class="col-lg-1 col-sm-12"></div>
+    <div class="col-lg-6 col-sm-12">
+        <div id="formulaire" class="container text-center">
+            <h2 class="text-center">Inscription</h2>
+
+            <form action="creation.php" method="post" class="text-center">
+
+                <div class="text-center">
+                    <input id="radioChercheur" class="w3-radio" type="radio" name="type" value="chercheur">
+                    <label>Chercheur</label>
+                    <input id="radioEntreprise" class="w3-radio" type="radio" name="type" value="entreprise">
+                    <label>Entreprise</label>
                 </div>
-            </div>
-            <div id="modalConnexion" class="w3-display-right">
-                <input class="banner" type="email" name="mail" placeholder="Email">
-                <input class="banner" type="password" name="mdp" placeholder="Mot de passe">
-                <a href="#" id="valider">Valider</a>
-            </div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="publier.html">Publier</a></li>
-                </ul>
-            </div>
-            <div>
-                <form action="keyword_query.php" method="post">
-                    <input id="input" type="search" name="search" placeholder="  Chercher...">
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-1 col-sm-12"></div>
-            <div class="col-lg-1 col-sm-12"></div>
-            <div class="col-lg-1 col-sm-12"></div>
-            <div class="col-lg-6 col-sm-12">
-                <div id="formulaire" class="container text-center">
-                    <h2 class="text-center">Inscription</h2>
-                    <div class="container">
-                        <div class="text-center">
-                            <form>
-                                <input id="radioEtudiant" class="w3-radio" type="radio" name="etude" value="etudiant" checked>
-                                <label>Etudiant</label>
-                                <input id="radioChercheur" class="w3-radio" type="radio" name="profession" value="chercheur">
-                                <label>Chercheur</label>
-                                <input id="radioEntreprise" class="w3-radio" type="radio" name="type" value="entreprise">
-                                <label>Entreprise</label>
-                            </form>
-                        </div>
-                    </div>
-                    <form class="text-center">
-                        <div class="form-group" >
-                            <input type="text" class="form-control" placeholder="Prénom">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nom">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Mot de passe">
-                        </div>
-                        <div class="form-group" >
-                            <input  id="etudiant" type="number" class="form-control" placeholder="N° étudiant">
-                        </div>
-                        <div class="form-group" >
-                            <input id="chercheur" type="number" class="form-control" placeholder="N° chercheur">
-                        </div>
-                        <div class="form-group" >
-                            <input id="entreprise1" type="number" class="form-control" placeholder="SIREN">
-                        </div>
-                        <div class="form-group" >
-                            <input id="entreprise2" type="text" class="form-control" placeholder="Nom enterprise">
-                        </div>
-                        <div class="form-group" >
-                            <textarea class="form-control" placeholder="Description" cols="10" rows="8"></textarea>
-                        </div></br>
-                        <div class="form-group" >
-                            <img id="profileImage" src="octocat.png" class="img-rounded" alt="Photo de profil" style="max-width: 70%;">
-                            <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo">
-                        </div>
-                        <div class="form-group" >
-                            <button class="w3-button w3-white w3-hover-orange">Valider</button>
-                        </div>
-                    </form>
+
+                <div class="form-group" >
+                    <input type="text" name= "Nom" class="form-control" placeholder="Prénom">
                 </div>
-            </div>
-            <div class="col-lg-1 col-sm-12"></div>
-            <div class="col-lg-1 col-sm-12"></div>
-            <div class="col-lg-1 col-sm-12"></div>
-        </div>
-        <script>
-            var connexion = document.getElementById('connexion');
-            connexion.onclick = function() {
-                document.getElementById("modalConnexion").style.visibility = "visible";
-                document.getElementById("options").style.visibility = "hidden";
-            };
-            /*var input = document.getElementById("input");
-            input.addEventListener('keyup',function(){
-                alert(input.value);
-            });*/
-            var etudiant = document.getElementById("radioEtudiant");
-            var entreprise = document.getElementById("radioEntreprise");
-            var chercheur = document.getElementById("radioChercheur");
-            etudiant.onclick = function(){
-                document.getElementById('etudiant').style.display = 'block';
-                document.getElementById('chercheur').style.display = 'none';
-                document.getElementById('entreprise1').style.display = 'none';
-                document.getElementById('entreprise2').style.display = 'none';
-                entreprise.checked = false;
-                chercheur.checked = false;
-                etudiant.checked = true;
-                document.getElementById("flex-container").style.backgroundColor = red;
-                alert("coucou");
-            }
-            chercheur.onchange = function(){
-                document.getElementById('etudiant').style.display = 'none';
-                document.getElementById('chercheur').style.display = 'block';
-                document.getElementById('entreprise1').style.display = 'none';
-                document.getElementById('entreprise2').style.display = 'none';
-                entreprise.checked = false;
-                chercheur.checked = true;
-                etudiant.checked = false;
-                document.getElementById("flex-container").style.backgroundColor = red;
-            }
-            entreprise.onchange = function(){
-                document.getElementById('etudiant').style.display = 'none';
-                document.getElementById('chercheur').style.display = 'none';
-                document.getElementById('entreprise1').style.display = 'block';
-                document.getElementById('entreprise2').style.display = 'block';
-                entreprise.checked = true;
-                chercheur.checked = false;
-                etudiant.checked = false;
-                document.getElementById("flex-container").style.backgroundColor = red;
-            }
-        </script>
-    </body>
+                <div class="form-group">
+                    <input type="text" name="Prenom" class="form-control" placeholder="Nom">
+                </div>
+
+                <div class="form-group">
+                <input type="email" name="Email" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="MotDePasse" class="form-control" placeholder="Mot de passe">
+                </div>
+
+                <div class="form-group" >
+                    <input id="chercheur" type="number" name="IdC" class="form-control" placeholder="N° chercheur">
+                </div>
+                <div class="form-group" >
+                    <input id="entreprise1" name="SIREN" type="number" class="form-control" placeholder="SIREN">
+                </div>
+                <div class="form-group" >
+                    <input id="entreprise2" name="NomE" type="text" class="form-control" placeholder="Nom enterprise">
+                </div>
+                <div class="form-group" >
+                    <textarea class="form-control" name="Description" placeholder="Description" cols="10" rows="8"></textarea>
+                </div></br>
+                <div class="form-group" >
+                    <img id="profileImage" src="octocat.png" class="img-rounded" alt="Photo de profil" style="max-width: 70%;">
+                </div>
+                <div class="form-group" >
+                    <button type="submit" class="w3-button w3-white w3-hover-orange">Valider</button>
+                </div>
+        </form>
+    </div>
+</div>
+<div class="col-lg-1 col-sm-12"></div>
+<div class="col-lg-1 col-sm-12"></div>
+<div class="col-lg-1 col-sm-12"></div>
+</div>
+<script>
+    var connexion = document.getElementById('connexion');
+    connexion.onclick = function() {
+        document.getElementById("modalConnexion").style.visibility = "visible";
+        document.getElementById("options").style.visibility = "hidden";
+    };
+    /*var input = document.getElementById("input");
+    input.addEventListener('keyup',function(){
+        alert(input.value);
+    });*/
+    //var etudiant = document.getElementById("radioEtudiant");
+    var entreprise = document.getElementById("radioEntreprise");
+    var chercheur = document.getElementById("radioChercheur");
+    /*etudiant.onclick = function(){
+        document.getElementById('etudiant').style.display = 'block';
+        document.getElementById('chercheur').style.display = 'none';
+        document.getElementById('entreprise1').style.display = 'none';
+        document.getElementById('entreprise2').style.display = 'none';
+        entreprise.checked = false;
+        chercheur.checked = false;
+        etudiant.checked = true;
+        document.getElementById("flex-container").style.backgroundColor = red;
+        //alert("coucou");
+    }*/
+    chercheur.onchange = function(){
+        //document.getElementById('etudiant').style.display = 'none';
+        document.getElementById('chercheur').style.display = 'block';
+        document.getElementById('entreprise1').style.display = 'none';
+        document.getElementById('entreprise2').style.display = 'none';
+        entreprise.checked = false;
+        chercheur.checked = true;
+        //etudiant.checked = false;
+        document.getElementById("flex-container").style.backgroundColor = red;
+    }
+    entreprise.onchange = function(){
+        //document.getElementById('etudiant').style.display = 'none';
+        document.getElementById('chercheur').style.display = 'none';
+        document.getElementById('entreprise1').style.display = 'block';
+        document.getElementById('entreprise2').style.display = 'block';
+        entreprise.checked = true;
+        chercheur.checked = false;
+        //etudiant.checked = false;
+        document.getElementById("flex-container").style.backgroundColor = red;
+    }
+</script>
+</body>
 </html>
