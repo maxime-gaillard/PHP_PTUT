@@ -25,7 +25,10 @@ else
         session_start();
         $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
         $_SESSION['Email'] = $_POST['Email'];
-        echo 'Vous êtes connecté !';
+        echo 'Vous êtes connecté ! Votre numéro d\'inscrit est ';
+        echo $_SESSION['NumInscrit'];
+        echo " et votre Email est ";
+        echo $_SESSION['Email'];
     }
     else {
         echo 'Mauvais mot de passe !';
