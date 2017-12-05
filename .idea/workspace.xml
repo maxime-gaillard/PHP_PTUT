@@ -18,14 +18,14 @@
       <file leaf-file-name="keyword_query.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="229">
+              <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding>
-                <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-                <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-                <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-                <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-                <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+                <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+                <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+                <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+                <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+                <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
               </folding>
             </state>
           </provider>
@@ -498,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512469660477</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Gestion erreur de recherche">
+      <created>1512469760365</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1512469760365</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26425000" />
+    <option name="totallyTimeSpent" value="26493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1682" height="1024" extended-state="6" />
@@ -566,7 +573,8 @@
     <MESSAGE value="header()" />
     <MESSAGE value="erreur ligne 25 keyword_query.php" />
     <MESSAGE value="keyword_query.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="keyword_query.php" />
+    <MESSAGE value="Gestion erreur de recherche" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestion erreur de recherche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -601,11 +609,11 @@
         <state relative-caret-position="306">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -656,11 +664,11 @@
         <state relative-caret-position="221">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -706,11 +714,11 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -748,11 +756,11 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -819,11 +827,11 @@
         <state relative-caret-position="306">
           <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>
@@ -997,14 +1005,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/keyword_query.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="229">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding>
-            <marker date="1512469751153" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
-            <marker date="1512469751153" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
-            <marker date="1512469751153" expanded="true" signature="1494:1548" ph="SELECT * FRO... PublicationPublique" />
-            <marker date="1512469751153" expanded="true" signature="1494:1555" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1512469819113" expanded="true" signature="987:1037" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1512469819113" expanded="true" signature="1525:1579" ph="SELECT * FRO... PublicationPublique" />
+            <marker date="1512469819113" expanded="true" signature="1525:1586" ph="SELECT * FRO... PublicationPublique" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,8 @@ try {
         $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibellePriv = :search');
         $req->execute(array('search' => $_POST['search']));
 
-        if(! $req->fetch()) {
+        $reqLocal = $req;
+        if(! $reqLocal->fetch()) {
             echo "Pas de publication";
         }
         else {
@@ -44,7 +45,8 @@ try {
         $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl = :search');
         $req->execute(array('search' => $_POST['search']));
 
-        if(! $req->fetch()) {
+        $reqLocal = $req;
+        if(! $reqLocal->fetch()) {
             echo "Pas de publication";
         }
         else {
