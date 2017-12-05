@@ -9,6 +9,7 @@ try {
 
     $id = $_SESSION['NumInscrit'];
 
+    echo $id;
     if(is_null($_SESSION['NumInscrit'])) {
         echo "Vous n'etes pas connecte !";
         die();
@@ -35,7 +36,7 @@ try {
 
     $req->closeCursor();
     $bdd = null;
-    header('Location:index.html');
+    //header('Location:index.html');
 }
 catch (PDOException $e) {
     $e->getMessage();
