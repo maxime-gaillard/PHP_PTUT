@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 try {
     $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012_maxime', '123', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -34,6 +35,7 @@ try {
 
     $req->closeCursor();
     $bdd = null;
+    header('Location:index.html');
 }
 catch (PDOException $e) {
     $e->getMessage();

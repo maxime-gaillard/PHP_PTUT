@@ -45,7 +45,5 @@ if($type == "chercheur"){
     }
 
 header('Location:index.html');
-
-//echo 'Un nouvel inscrit a été ajouté !';
 $bdd = null;
 ?>
