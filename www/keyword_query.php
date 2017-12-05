@@ -28,34 +28,22 @@ try {
         $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibellePriv = :search');
         $req->execute(array('search' => $_POST['search']));
 
-        $reqLocal = $req;
-        if(! $reqLocal->fetch()) {
-            echo "Pas de publication";
-        }
-        else {
-            echo "Resultats de la recherche : <br/><br/>";
-            while ($data = $req->fetch()) {
-                echo "<strong>";
-                echo $data['LibellePriv'];
-                echo "</strong><br/>";
-            }
+        echo "Resultats de la recherche : <br/><br/>";
+        while ($data = $req->fetch()) {
+            echo "<strong>";
+            echo $data['LibellePriv'];
+            echo "</strong><br/>";
         }
     }
     else {
         $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl = :search');
         $req->execute(array('search' => $_POST['search']));
 
-        $reqLocal = $req;
-        if(! $reqLocal->fetch()) {
-            echo "Pas de publication";
-        }
-        else {
-            echo "Resultats de la recherche : <br/><br/>";
-            while ($data = $req->fetch()) {
-                echo "<strong>";
-                echo $data['LibellePubl'];
-                echo "</strong><br/>";
-            }
+        echo "Resultats de la recherche : <br/><br/>";
+        while ($data = $req->fetch()) {
+            echo "<strong>";
+            echo $data['LibellePubl'];
+            echo "</strong><br/>";
         }
     }
 
