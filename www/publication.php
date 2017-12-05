@@ -9,7 +9,6 @@ try {
 
     $id = $_SESSION['NumInscrit'];
 
-    echo $id;
     if(is_null($_SESSION['NumInscrit'])) {
         echo "Vous n'etes pas connecte !";
         die();
@@ -32,7 +31,7 @@ try {
             'NumInscrit' => $id,) ) or die (print_r($req->errorInfo())) ;
     }
 
-    echo 'Une nouvelle publication a été ajoutée !';
+    echo 'L\'utilisateur ' . $id . ' a créé une nouvelle publication !';
 
     $req->closeCursor();
     $bdd = null;

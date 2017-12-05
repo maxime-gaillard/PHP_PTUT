@@ -29,10 +29,15 @@ try {
         $req->execute(array('search' => $_POST['search']));
 
         echo "Resultats de la recherche : <br/><br/>";
-        while ($data = $req->fetch()) {
-            echo "<strong>";
-            echo $data['LibellePriv'];
-            echo "</strong><br/>";
+        if($req->rowCount() == 0) {
+            echo "Pas de resultat";
+        }
+        else {
+            while ($data = $req->fetch()) {
+                echo "<strong>";
+                echo $data['LibellePriv'];
+                echo "</strong><br/>";
+            }
         }
     }
     else {
@@ -40,10 +45,15 @@ try {
         $req->execute(array('search' => $_POST['search']));
 
         echo "Resultats de la recherche : <br/><br/>";
-        while ($data = $req->fetch()) {
-            echo "<strong>";
-            echo $data['LibellePubl'];
-            echo "</strong><br/>";
+        if($req->rowCount() == 0) {
+            echo "Pas de resultat";
+        }
+        else {
+            while ($data = $req->fetch()) {
+                echo "<strong>";
+                echo $data['LibellePubl'];
+                echo "</strong><br/>";
+            }
         }
     }
 
