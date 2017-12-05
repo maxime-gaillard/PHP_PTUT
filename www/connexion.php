@@ -1,4 +1,5 @@
 <?php
+session_start();
 try
 {
     $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
@@ -22,7 +23,6 @@ if (!$resultat)
 else
 {
     if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
-        session_start();
         $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
         $_SESSION['Email'] = $_POST['Email'];
         echo 'Vous êtes connecté ! Votre numéro d\'inscrit est ';
