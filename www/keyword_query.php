@@ -21,8 +21,10 @@ try {
         die();
     }
 
+    $id = $_SESSION['NumInscrit'];
+
     $req = $bdd->prepare('SELECT * FROM Entreprise WHERE NumE LIKE ?');
-    $req->execute($_SESSION['NumInscrit']);
+    $req->execute($id);
 
     if($req) {
         $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibelleP LIKE ?');
