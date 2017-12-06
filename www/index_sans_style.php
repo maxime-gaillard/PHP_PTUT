@@ -87,14 +87,14 @@
 
 <h2>Test de recherche base de données</h2>
 
-<form action="keyword_query.php" method="post">
+<form action="rechercheMotCle.php" method="post">
     <p>Saisir : <input type="text" name="keyword" /></p>
     <p><input type="submit" value="Trouver"/></p>
 </form>
 
 <h2>Test de la mise en ligne d'une publication</h2>
 
-<form action="publication.php" method="post">
+<form action="publier.php" method="post">
     <p>Quelle personne etes vous ?</p>
 
     <div>
