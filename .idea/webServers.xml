@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bdd1408a-7cd9-4169-9018-4cadbc6f16c6" name="ftp" url="http://ftp-groupe2equipe2ptut.alwaysdata.net">
+        <fileTransfer host="ftp-groupe2equipe2ptut.alwaysdata.net" port="21" rootFolder="/www">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

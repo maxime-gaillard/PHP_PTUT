@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+<body>
+<form action="insription.php" method="post">
+    <p>Quelle personne etes vous ?</p>
+    <input type="radio" name="type" value="etudiant" id="Etudiant" checked="checked"/> <label
+        for="Etudiant">Etudiant</label>
+    <input type="radio" name="type" value="chercheur" id="Chercheur"/> <label for="Chercheur">Chercheur</label>
+    <input type="radio" name="type" value="entreprise" id="Entreprise"/> <label for="Entreprise">Entreprise</label>
+
+    <p>Nom : <input type="text" name="nom"/></p>
+    <p>Prenom : <input type="text" name="prenom"/></p>
+    <p>SIREN : <input type="text" name="siren"/></p>
+    <p>Identifiant chercheur :</Identif> : <input type="text" name="idChercheur"/></p>
+
+    <p>Votre message ici: </p>
+    <textarea name="description" rows="8" cols="45">
+        </textarea>
+
+    <p><input type="submit" value="S'inscrire"/></p>
+</form>
+</body>
+</html>
