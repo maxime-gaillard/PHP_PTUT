@@ -17,9 +17,3 @@
 session_start();
 include 'controleur/startPage.php';
 start_page("Index");
-
-if (empty($_SESSION['NumInscrit'])) {
-    include 'vue/BodyDeCo.html';
-} else {
-    include 'vue/BodyCo.html';
-}
