@@ -51,3 +51,4 @@ if($type == "chercheur"){
 header('Location:/index.html');
 $bdd = null;
 ?>
+
