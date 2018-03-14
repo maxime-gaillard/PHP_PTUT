@@ -17,7 +17,7 @@
 session_start();
 
 include 'vue/EnTete.html';
-if (isempty($_SESSION['NumInscrit'])) {
+if (empty($_SESSION['NumInscrit'])) {
     include 'vue/BodyDeCo.html';
 
 } else {
