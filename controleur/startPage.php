@@ -83,7 +83,7 @@ function btnInsCo () {
     echo '<li><a href="../vue/inscription.html">S\'inscrire</a></li>
                     <li><a href="#" id="connexion">Connexion</a></li>
                     <script>
-                        var connexion = document.getElementById(\'connexion\');
+                        var connexion = document.getElementById("connexion");
                         connexion.onclick = function () {
                             document.getElementById("modalConnexion").style.visibility = "visible";
                             document.getElementById("options").style.visibility = "hidden";

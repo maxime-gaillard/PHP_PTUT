@@ -27,5 +27,5 @@ if (!$resultat) {
         } else {
     $message = 'Mauvais mot de passe';
     }
-header('Location:../index.php?$message');
+header("Location:../index.php?message=$message");
 ?>
