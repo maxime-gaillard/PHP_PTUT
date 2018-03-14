@@ -48,7 +48,7 @@ if($type == "chercheur"){
 //        'SIREN' => $SIREN)) or die (print_r($req->errorInfo()));
 }
 
-header('Location:/index.html');
+header('Location:/index.php');
 $bdd = null;
 ?>
 

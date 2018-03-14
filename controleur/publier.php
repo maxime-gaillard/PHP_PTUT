@@ -36,4 +36,4 @@ if ($resultat) {
 //echo 'L\'utilisateur ' . $id . ' a créé une nouvelle publication !';
 
 //$bdd = null;
-header('Location:../index.html');
+header('Location:../index.php');
