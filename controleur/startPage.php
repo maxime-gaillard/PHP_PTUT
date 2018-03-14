@@ -80,7 +80,7 @@ function p2 () {
 }
 
 function btnInsCo () {
-    echo '<li><a href="../vue/inscription.html">S\'inscrire</a></li>
+    echo '<li><a href="../controleur/ControleurInscription.php">S\'inscrire</a></li>
                     <li><a href="#" id="connexion">Connexion</a></li>
                     <script>
                         var connexion = document.getElementById("connexion");
@@ -89,7 +89,7 @@ function btnInsCo () {
                             document.getElementById("options").style.visibility = "hidden";
                         };
                         /*var input = document.getElementById("input");
-                        input.addEventListener(\'keyup\',function(){
+                        input.addEventListener(\\\'keyup\\\',function(){
                             alert(input.value);
                         });*/
                     </script>';

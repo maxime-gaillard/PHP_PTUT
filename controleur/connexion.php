@@ -19,7 +19,7 @@ $resultat = Inscrit::selectByEmail($_POST['Email']);
 $message ='';
 
 if (!$resultat) {
-    $message = 'Le mail n\'existe pas';
+    $message = "Le mail n'existe pas";
 } else if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
                 $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
                 $_SESSION['Email'] = $_POST['Email'];
