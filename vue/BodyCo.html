@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Index</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/rssToJson.js"></script>
-</head>
 <body class="w3-light-grey">
 <div class="w3-display-container background" style="width: 100%; min-height: 150px;">
     <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
@@ -20,10 +6,6 @@
     <div class="w3-display-bottomright" id="options">
         <div>
             <ul>
-                <?php if (isset($_SESSION['NumInscrit'])) {?>
-                <li><a href="vue/inscription.html">S'inscrire</a></li>
-                <li><a href="#" id="connexion">Connexion</a></li>
-
                 <li><a href="#" id="deconnexion">Déconnexion</a></li>
             </ul>
         </div>
@@ -44,7 +26,7 @@
         <ul>
             <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="#">Publication</a></li>
-            <li><a href="vue/publier.html">Publier</a></li>
+            <li><a href="../controleur/ControleurPublier.php">Publier</a></li>
         </ul>
     </div>
     <div>
