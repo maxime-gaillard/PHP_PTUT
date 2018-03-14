@@ -16,26 +16,16 @@ include '../modele/IncludeDB.php';
 //$req->execute(array('Email' => $_POST['Email']));
 
 $resultat = Inscrit::selectByEmail($_POST['Email']);
+$message ='';
 
-if (!$resultat)
-{
-//    echo 'Mauvais mail !';
-}
-
-else
-{
-    if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
-        $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
-        $_SESSION['Email'] = $_POST['Email'];
-//        echo 'Vous êtes connecté ! Votre numéro d\'inscrit est ';
-//        echo $_SESSION['NumInscrit'];
-//        echo " et votre Email est ";
-//        echo $_SESSION['Email'];
+if (!$resultat) {
+    $message = 'Le mail n\'existe pas';
+} else if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
+                $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
+                $_SESSION['Email'] = $_POST['Email'];
+                $message = 'Vous êtes connecté';
+        } else {
+    $message = 'Mauvais mot de passe';
     }
-    else {
-//        echo 'Mauvais mot de passe !';
-    }
-}
-
-header('Location:../index.php');
+header('Location:../index.php?$message');
 ?>
