@@ -16,10 +16,8 @@
 <?php
 session_start();
 
-include 'vue/EnTete.html';
 if (empty($_SESSION['NumInscrit'])) {
-    include 'vue/BodyDeCo.html';
-
+    include 'vue/indexDeCo.html';
 } else {
-    include 'vue/BodyCo.html';
+    include 'vue/indexCo.html';
 }
