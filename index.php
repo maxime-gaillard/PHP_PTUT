@@ -17,3 +17,4 @@
 session_start();
 include 'controleur/startPage.php';
 start_page("Index");
+include 'vue/Body.html';
