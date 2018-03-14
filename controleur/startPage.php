@@ -13,7 +13,7 @@ function start_page($title) {
     if (empty($_SESSION['NumInscrit'])) {
         btnInsCo();
     } else {
-        echo '<li><a href="#">Déconnexion</a></li>';
+        echo '<li><a href="../controleur/deconnexion.php">Déconnexion</a></li>';
     }
 
     p2();
