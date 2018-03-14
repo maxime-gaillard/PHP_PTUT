@@ -27,9 +27,7 @@ $type = $_POST['type'];
 //    'MotDePasse'  => $pass_hache,
 //    'Description' => $description) ) or die ( print_r($req->errorInfo())) ;
 
-Inscrit::insertInscrit($nom, $prenom, $email, $pass_hache, $description);
-
-$NumInscrit = $bdd -> lastInsertId();
+$NumInscrit = Inscrit::insertInscrit($nom, $prenom, $email, $pass_hache, $description);
 
 if($type == "chercheur"){
     Chercheur::insertChercheur($_POST['IdC'], $NumInscrit);

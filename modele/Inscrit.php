@@ -17,6 +17,8 @@ class Inscrit
             'Email'       => $email,
             'MotDePasse'  => $pass_hache,
             'Description' => $description) ) or die ( print_r($req->errorInfo())) ;
+
+        return $GLOBALS['pdo']->lastInsertId();
     }
 
     public static function selectByEmail ($email) {
