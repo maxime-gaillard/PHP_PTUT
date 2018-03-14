@@ -11,7 +11,6 @@ require_once ('db_connect.php');
 
 class Chercheur
 {
-
     public static function insertChercheur($IdC, $NumInscrit)
     {
         $req = $GLOBALS['pdo']->prepare('INSERT INTO Chercheur(NumC, IdC) VALUES(:NumC, :IdC)');
