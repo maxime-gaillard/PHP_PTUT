@@ -13,12 +13,13 @@
                 dataType: 'json'
             })
             .done(function (data) {
-                $(container).html('<h2>'+ data.responseData.feed.title +'</h2>');
+                // TODO ce code produit une erreur
+                /*$(container).html('<h2>'+ data.responseData.feed.title +'</h2>');
 
                 $.each(data.responseData.feed.entries, function(key, value){
-                    var thehtml = '<h3><a href="'+value.link+'" target="_blank">'+value.title+'</a></h3>';
+                    let thehtml = '<h3><a href="' + value.link + '" target="_blank">' + value.title + '</a></h3>';
                     $(container).append(thehtml);
-                });
+                });*/
             })
         }
 
@@ -28,4 +29,3 @@
     });
 
 }) ();
-

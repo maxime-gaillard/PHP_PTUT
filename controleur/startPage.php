@@ -7,7 +7,8 @@
  */
 session_start();
 
-function start_page($title) {
+function start_page($title)
+{
     p1($title);
 
     if (empty($_SESSION['NumInscrit'])) {
@@ -32,7 +33,8 @@ function start_page($title) {
         </div>';
 }
 
-function p1 ($title) {
+function p1($title)
+{
     echo '<!DOCTYPE html>
     <html lang="fr">
     <head>
@@ -57,7 +59,8 @@ function p1 ($title) {
                 <ul>';
 }
 
-function p2 () {
+function p2()
+{
     echo '</ul>
                 </div>
             </div>
@@ -79,7 +82,8 @@ function p2 () {
                     <li><a href="#">Publication</a></li>';
 }
 
-function btnInsCo () {
+function btnInsCo()
+{
     echo '<li><a href="../controleur/ControleurInscription.php">S\'inscrire</a></li>
                     <li><a href="#" id="connexion">Connexion</a></li>
                     <script>
