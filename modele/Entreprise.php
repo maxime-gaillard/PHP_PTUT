@@ -6,8 +6,6 @@
  * Time: 13:37
  */
 
-require_once ('db_connect.php');
-
 class Entreprise
 {
     public static function insertEntreprise($NumInscrit, $NomE, $SIREN)

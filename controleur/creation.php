@@ -1,15 +1,15 @@
 <?php
 session_start();
-include "../modele/Chercheur.php";
-try
-{
-    $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (Exception $e)
-{
-    die('Erreur à la création : ' . $e->getMessage());
-}
+include "../modele/IncludeDB.php";
+//try
+//{
+//    $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
+//    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//}
+//catch (Exception $e)
+//{
+//    die('Erreur à la création : ' . $e->getMessage());
+//}
 
 $nom = htmlspecialchars($_POST['Nom']);
 $prenom = htmlspecialchars($_POST['Prenom']);

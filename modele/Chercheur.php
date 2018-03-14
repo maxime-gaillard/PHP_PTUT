@@ -6,9 +6,6 @@
  * Time: 13:36
  */
 
-require_once ('db_connect.php');
-
-
 class Chercheur
 {
     public static function insertChercheur($IdC, $NumInscrit)

@@ -6,9 +6,6 @@
  * Time: 13:37
  */
 
-require_once ('db_connect.php');
-
-
 class Inscrit
 {
     public static function insertInscrit($nom, $prenom, $email, $pass_hache, $description)
@@ -20,5 +17,13 @@ class Inscrit
             'Email'       => $email,
             'MotDePasse'  => $pass_hache,
             'Description' => $description) ) or die ( print_r($req->errorInfo())) ;
+    }
+
+    public static function selectByEmail ($email) {
+        $req = $GLOBALS['pdo']->prepare('SELECT NumInscrit, MotDePasse FROM Inscrit WHERE Email = :Email');
+        $req->execute(array(
+            'Email' => $email)) ;
+
+        return $req->fetch();
     }
 }
