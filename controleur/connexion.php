@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include '../modele/IncludeDB.php';
 //try
 //{
 //    $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
@@ -37,6 +37,5 @@ else
     }
 }
 
-header('Location:index.html');
-$bdd = null;
+header('Location:../index.html');
 ?>

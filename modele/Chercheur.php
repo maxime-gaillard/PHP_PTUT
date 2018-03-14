@@ -15,4 +15,10 @@ class Chercheur
             'NumC' => $NumInscrit,
             'IdC' => $IdC)) or die (print_r($req->errorInfo()));
     }
+
+    public static function selectByNum ($id) {
+        $req = $GLOBALS['pdo']->prepare('SELECT * FROM Chercheur WHERE NumC = :numC');
+        $req->execute(array('numC' => $id,) ) or die (print_r($req->errorInfo())) ;
+        return $req->fetch();
+    }
 }
