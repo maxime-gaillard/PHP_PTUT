@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controleur/publier.php" afterPath="$PROJECT_DIR$/controleur/publier.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modele/IncludeDB.php" afterPath="$PROJECT_DIR$/modele/IncludeDB.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,51 +16,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="publier.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="publier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controleur/publier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="302">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
-                <marker date="1521036005866" expanded="true" signature="282:324" ph="SELECT * FRO... Chercheur" />
-                <marker date="1521036005866" expanded="true" signature="924:1010" ph="INSERT INTO PublicationPrivee... " />
+                <marker date="1521036821815" expanded="true" signature="373:415" ph="SELECT * FRO... Chercheur" />
+                <marker date="1521036821815" expanded="true" signature="1015:1101" ph="INSERT INTO PublicationPrivee... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicationPublique.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/PublicationPublique.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <marker date="1521036015859" expanded="true" signature="238:326" ph="INSERT INTO PublicationPublique... " />
-              </folding>
+            <state relative-caret-position="441">
+              <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicationPrivee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/PublicationPrivee.php">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleur/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="386">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding>
-                <marker date="1521036012834" expanded="true" signature="234:320" ph="INSERT INTO PublicationPrivee... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Inscrit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/Inscrit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding>
-                <marker date="1521034288928" expanded="true" signature="245:366" ph="INSERT INTO Inscrit... " />
-                <marker date="1521034288928" expanded="true" signature="784:847" ph="SELECT NumIn... Inscrit" />
+                <marker date="1521036194486" expanded="true" signature="324:387" ph="SELECT NumIn... Inscrit" />
               </folding>
             </state>
           </provider>
@@ -111,16 +99,16 @@
         <option value="$PROJECT_DIR$/FICHIERS_PROJET/css.css" />
         <option value="$PROJECT_DIR$/modele/db_connect.php" />
         <option value="$PROJECT_DIR$/modele/Include.php" />
-        <option value="$PROJECT_DIR$/modele/IncludeDB.php" />
         <option value="$PROJECT_DIR$/modele/Entreprise.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/modele/Inscrit.php" />
         <option value="$PROJECT_DIR$/controleur/creation.php" />
         <option value="$PROJECT_DIR$/controleur/connexion.php" />
         <option value="$PROJECT_DIR$/modele/Chercheur.php" />
         <option value="$PROJECT_DIR$/modele/PublicationPublique.php" />
         <option value="$PROJECT_DIR$/modele/PublicationPrivee.php" />
+        <option value="$PROJECT_DIR$/modele/IncludeDB.php" />
         <option value="$PROJECT_DIR$/controleur/publier.php" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -170,6 +158,11 @@
               <item name="PHP_PTUT" type="b2602c69:ProjectViewProjectNode" />
               <item name="PHP_PTUT" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controleur" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PHP_PTUT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PHP_PTUT" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="PHP_PTUT" type="b2602c69:ProjectViewProjectNode" />
@@ -429,7 +422,7 @@
       <workItem from="1512244732821" duration="1559000" />
       <workItem from="1512246329522" duration="13300000" />
       <workItem from="1521029865414" duration="1813000" />
-      <workItem from="1521031891110" duration="4324000" />
+      <workItem from="1521031891110" duration="7285000" />
     </task>
     <task id="LOCAL-00001" summary="Fichier au bon endroit">
       <created>1512035379562</created>
@@ -704,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521036198921</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="MVC">
+      <created>1521036220817</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1521036220817</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33658000" />
+    <option name="totallyTimeSpent" value="36619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -776,14 +776,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Informations compte alwaysdata.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/Maxime/insription.php" />
     <entry file="file://$PROJECT_DIR$/www/keyword_query.php" />
     <entry file="file://$PROJECT_DIR$/www/publication.php" />
     <entry file="file://$PROJECT_DIR$/www/connexion.php" />
@@ -909,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/IncludeDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controleur/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -964,24 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <marker date="1521036194486" expanded="true" signature="324:387" ph="SELECT NumIn... Inscrit" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modele/Chercheur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1001,6 +967,14 @@
             <marker date="1521034288928" expanded="true" signature="245:366" ph="INSERT INTO Inscrit... " />
             <marker date="1521034288928" expanded="true" signature="784:847" ph="SELECT NumIn... Inscrit" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/IncludeDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,14 +998,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/rechercheMotCle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521031883532" expanded="true" signature="835:877" ph="SELECT * FRO... Entreprise" />
+            <marker date="1521031883532" expanded="true" signature="987:1046" ph="SELECT * FRO... PublicationPrivee" />
+            <marker date="1521031883532" expanded="true" signature="1493:1554" ph="SELECT * FRO... PublicationPublique" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controleur/publier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="302">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
-            <marker date="1521036005866" expanded="true" signature="282:324" ph="SELECT * FRO... Chercheur" />
-            <marker date="1521036005866" expanded="true" signature="924:1010" ph="INSERT INTO PublicationPrivee... " />
+            <marker date="1521036821815" expanded="true" signature="373:415" ph="SELECT * FRO... Chercheur" />
+            <marker date="1521036821815" expanded="true" signature="1015:1101" ph="INSERT INTO PublicationPrivee... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding>
+            <marker date="1521036194486" expanded="true" signature="324:387" ph="SELECT NumIn... Inscrit" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -10,3 +10,5 @@ require_once ('db_connect.php');
 require_once ('Chercheur.php');
 require_once ('Entreprise.php');
 require_once ('Inscrit.php');
+require_once ('PublicationPrivee.php');
+require_once ('PublicationPublique.php');

@@ -22,8 +22,11 @@
     <div class="w3-display-bottomright" id="options">
         <div>
             <ul>
+                <?php if (isset($_SESSION['NumInscrit'])) {?>
                 <li><a href="vue/inscription.html">S'inscrire</a></li>
                 <li><a href="#" id="connexion">Connexion</a></li>
+
+                <li><a href="#" id="deconnexion">Déconnexion</a></li>
             </ul>
         </div>
     </div>

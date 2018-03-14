@@ -1,16 +1,19 @@
 <?php
 session_start();
-
+include '../modele/IncludeDB.php';
 $descitpion = htmlspecialchars($_POST['description']);
-if($descitpion == "" || is_null($descitpion)) die();
+if($descitpion == "" || is_null($descitpion)) {
+//    echo 'HAHHAHAHAHAHHA';
+//    die();
+}
 
 $id = $_SESSION['NumInscrit'];
 
 if(is_null($_SESSION['NumInscrit'])) {
-    echo "Vous n'etes pas connecte !";
-    die();
+//    echo "Vous n'etes pas connecte !";
+//    die();
 }
-
+//echo "TEST";
 //$req1 = $bdd->prepare('SELECT * FROM Chercheur WHERE NumC = :numC');
 //$req1->execute(array('numC' => $id,) ) or die (print_r($req->errorInfo())) ;
 
@@ -30,9 +33,7 @@ if ($resultat) {
 //        'NumInscrit' => $id,) ) or die (print_r($req->errorInfo())) ;
 }
 
-echo 'L\'utilisateur ' . $id . ' a créé une nouvelle publication !';
+//echo 'L\'utilisateur ' . $id . ' a créé une nouvelle publication !';
 
-$req->closeCursor();
-$bdd = null;
-//header('Location:index.html');
-?>
+//$bdd = null;
+header('Location:../index.html');
