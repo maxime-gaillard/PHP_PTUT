@@ -29,11 +29,12 @@ $req->execute(array(
 $NumInscrit = $bdd -> lastInsertId();
 
 if($type == "chercheur"){
-    $IdC = ($_POST['IdC']);
-    $reqChercheur = $bdd->prepare('INSERT INTO Chercheur(NumC, IdC) VALUES(:NumC, :IdC)');
-    $reqChercheur->execute(array(
-        'NumC' => $NumInscrit,
-        'IdC'  => $IdC)) or die (print_r($req->errorInfo()));
+    Chercheur::insertChercheur($_POST['IdC'], $NumInscrit);
+//    $IdC = ($_POST['IdC']);
+//    $reqChercheur = $bdd->prepare('INSERT INTO Chercheur(NumC, IdC) VALUES(:NumC, :IdC)');
+//    $reqChercheur->execute(array(
+//        'NumC' => $NumInscrit,
+//        'IdC'  => $IdC)) or die (print_r($req->errorInfo()));
 } else {
     $NomE = ($_POST['NomE']);
     $SIREN = ($_POST['SIREN']);

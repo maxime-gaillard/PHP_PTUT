@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -14,7 +14,7 @@
 <body class="w3-light-grey">
 <div class="w3-display-container background" style="width: 100%; min-height: 150px;">
     <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
-        <img src="logosite.png" style="height: 8em;">
+        <img src="../logosite.png" style="height: 8em;">
     </div>
     <div class="w3-display-bottomright" id="options">
         <div>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div id="modalConnexion" class="w3-display-right">
-        <form action="php/connexion.php" method="post" class="text-center">
+        <form action="../controleur/connexion.php" method="post" class="text-center">
             <input type="email" name="Email" placeholder="Email">
             <input type="password" name="MotDePasse" placeholder="Mot de passe">
             <button id="valider" type="submit" class="w3-button w3-white w3-hover-orange">Valider</button>
@@ -36,13 +36,13 @@
     <div></div>
     <div>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="../index.html">Accueil</a></li>
             <li><a href="#">Publication</a></li>
             <li><a href="publier.html" class="active">Publier</a></li>
         </ul>
     </div>
     <div>
-        <form action="php/rechercheMotCle.php" method="post">
+        <form action="../controleur/rechercheMotCle.php" method="post">
             <input id="input" type="search" name="search" placeholder="  Chercher...">
         </form>
     </div>
@@ -54,7 +54,7 @@
     <div class="col-lg-6 col-sm-12">
         <div id="formulaire" class="container text-center">
             <h2 class="text-center">Publication</h2>
-            <form role="form" action="php/publier.php" method="post" class="text-center">
+            <form role="form" action="../controleur/publier.php" method="post" class="text-center">
                 <div class="form-group">
                     <input type="text" id="titre" name="titre" class="form-control" placeholder="Titre">
                 </div>

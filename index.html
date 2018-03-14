@@ -19,13 +19,13 @@
     <div class="w3-display-bottomright" id="options">
         <div>
             <ul>
-                <li><a href="inscription.html">S'inscrire</a></li>
+                <li><a href="vue/inscription.html">S'inscrire</a></li>
                 <li><a href="#" id="connexion">Connexion</a></li>
             </ul>
         </div>
     </div>
     <div id="modalConnexion" class="w3-display-right">
-        <form action="php/connexion.php" method="post" class="text-center">
+        <form action="controleur/connexion.php" method="post" class="text-center">
             <input type="email" name="Email" placeholder="Email">
             <input type="password" name="MotDePasse" placeholder="Mot de passe">
             <!--<a href="#" id="valider">Valider</a>-->
@@ -39,11 +39,11 @@
         <ul>
             <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="#">Publication</a></li>
-            <li><a href="publier.html">Publier</a></li>
+            <li><a href="vue/publier.html">Publier</a></li>
         </ul>
     </div>
     <div>
-        <form action="php/rechercheMotCle.php" method="post">
+        <form action="controleur/rechercheMotCle.php" method="post">
             <input type="search" name="search" placeholder="  Chercher...">
         </form>
     </div>
