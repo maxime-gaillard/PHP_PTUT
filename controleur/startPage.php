@@ -48,8 +48,9 @@ function p1($title)
         <div class="w3-display-middle w3-large" style="text-align: center; margin-top: 0em; min-width: 20%; height: 8em;">
             <img src="../logosite.png" style="height: 8em;">
         </div>
-        <div class="w3-display-bottomright" id="options">
-            <div>
+        <div class="w3-display-bottomright" id="options">'
+            . '<p style="text-align: center;">' . $_GET['message'] . '</p>' .
+            '<div>
                 <ul>';
 }
 
