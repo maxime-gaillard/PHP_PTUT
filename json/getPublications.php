@@ -5,10 +5,14 @@ $articles = new stdClass();
 $articles->publicationsPubl = array();
 $articles->publicationsPriv = array();
 
-// TODO remplacer ces trois lignes
-$pdo = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
+$pdo = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8',
+    '146012',
+    '123');
 $pdo->exec('SET CHARACTER SET utf8');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+/*$req = $GLOBALS['pdo']->prepare('SELECT * FROM PublicationPublique');
+$req->execute() or die (print_r($req->errorInfo()));*/
 
 $req = $pdo->prepare('SELECT * FROM PublicationPublique');
 $req->execute() or die (print_r($req->errorInfo()));
@@ -20,6 +24,9 @@ while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
     $objet->NumInscrit = $ligne->NumInscrit;
     array_push($articles->publicationsPubl, $objet);
 }
+
+/*$req = $GLOBALS['pdo']->prepare('SELECT * FROM PublicationPrivee');
+$req->execute() or die (print_r($req->errorInfo()));*/
 
 $req = $pdo->prepare('SELECT * FROM PublicationPrivee');
 $req->execute() or die (print_r($req->errorInfo()));

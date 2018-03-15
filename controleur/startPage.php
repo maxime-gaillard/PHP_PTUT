@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gaill
- * Date: 14/03/2018
- * Time: 16:35
- */
 session_start();
 
 function start_page($title)
@@ -19,7 +13,7 @@ function start_page($title)
 
     p2();
 
-    if (!empty($_SESSION['NumInscrit'])) {
+    if (isset($_SESSION['NumInscrit'])) {
         echo '<li><a href="../controleur/ControleurPublier.php">Publier</a></li>';
     }
 
@@ -78,8 +72,8 @@ function p2()
             <div></div>
             <div>
                 <ul>
-                    <li><a href="../index.php" class="active">Accueil</a></li>
-                    <li><a href="#">Publication</a></li>';
+                    <li><a href="/index.php" class="active">Accueil</a></li>
+                    <li><a href="/vue/publications.php">Publications</a></li>';
 }
 
 function btnInsCo()
@@ -87,7 +81,7 @@ function btnInsCo()
     echo '<li><a href="../controleur/ControleurInscription.php">S\'inscrire</a></li>
                     <li><a href="#" id="connexion">Connexion</a></li>
                     <script>
-                        var connexion = document.getElementById("connexion");
+                        let connexion = document.getElementById("connexion");
                         connexion.onclick = function () {
                             document.getElementById("modalConnexion").style.visibility = "visible";
                             document.getElementById("options").style.visibility = "hidden";
