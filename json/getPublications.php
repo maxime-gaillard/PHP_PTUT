@@ -1,9 +1,16 @@
 <?php
 session_start();
 
+require_once '../modele/Inscrit.php';
+
 $articles = new stdClass();
 $articles->publicationsPubl = array();
 $articles->publicationsPriv = array();
+$articles->est_entreprise = false;
+
+if (Inscrit::estEntreprise($_SESSION['NumInscrit'])) {
+    $articles->est_entreprise = true;
+}
 
 $pdo = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8',
     '146012',
