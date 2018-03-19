@@ -8,7 +8,7 @@
         );
     };
 
-    function boucle (data, k, j, div, divFinale) {
+    function boucle (data, k, j, div, divFinale, typeLibelle) {
 
         for (let i = k; i < j; ++i) {
             div.append($('<div id="publ" />')
@@ -16,14 +16,24 @@
                     'background-color' : 'white',
                     'margin' : 'auto',
                     'width' : '95%',
-                    'height' : '220px'
+                    'height' : '220px',
+                    'padding-top' : '5px',
+                    'margin-bottom' : '15px',
+                    // 'border-style' : 'solid',
+                    // 'border-color' : '#FFA500',
+                    // 'border-bottom-width' : '0px',
+                    'padding-left' : '20px'
                 })
+                //
+                // .css({
+                //     'border-right-width' : '0px'
+                // })
                 .append($('<h2 />')
                     .html(data[i]['titre'])
                     .css({'font-weight' : 'bold'})
                 )
                 .append($('<p />').html(data[i]['date']))
-                .append($('<p />').html(data[i]['LibellePubl']))
+                .append($('<p />').html(data[i][typeLibelle]))
             );
         }
         divFinale.append(div);
@@ -32,7 +42,14 @@
     let cssDiv = {
         'width' : '50%',
         'float' : 'left',
+        'min-width' : '640px',
+        'margin-top' : '15px',
         'display' : 'inline-block'
+    };
+
+    let titreDiv = {
+        'font-size' : '40px',
+        'text-align' : 'center'
     };
 
     function afficheAccueil (data) {
@@ -43,28 +60,37 @@
         let div2 = $('<div id="publAccueil2" />')
             .css(cssDiv);
 
-        boucle (data.publicationsPubl, 0, 2, div, $('#div-publications-accueil'));
-        boucle (data.publicationsPubl, 2, 4, div2, $('#div-publications-accueil'));
+        boucle (data.publicationsPubl, 0, 2, div, $('#div-publications-accueil'), 'LibellePubl');
+        boucle (data.publicationsPubl, 2, 4, div2, $('#div-publications-accueil'), 'LibellePubl');
     }
 
     function affichePublications(data) {
         let div = $('<div id="publPublications" />').css(cssDiv);
-        boucle (data.publicationsPubl, 0, data.publicationsPubl.length, div, $('#div-publications'))
+
+        div.append($('<h2 />')
+            .html("Publications publiques :")
+            .css(titreDiv)
+        ).append($('<br />'));
+
+        boucle (data.publicationsPubl, 0, data.publicationsPubl.length, div, $('#div-publications'), 'LibellePubl');
 
         if (data.est_entreprise) {
             let div1 = $('<div id="publPublicationsPriv" />').css(cssDiv);
-            boucle (data.publicationsPriv, 0, data.publicationsPriv.length, div1, $('#div-publications'))
+
+            div1.append($('<h2 />')
+                .html("Publications privées :")
+                .css(titreDiv)
+            ).append($('<br />'));
+
+            boucle (data.publicationsPriv, 0, data.publicationsPriv.length, div1, $('#div-publications'), 'LibellePriv');
         }
     }
-
-    // let cssDivAccueil = {
-    //     'width' : '100%'
-    // };
 
     $('document').ready(function () {
         $.ajax({
             url: '/json/getPublications.php',
             method: 'get'
+
         }).done(function (data) {
             // // vue/Body.html
             // $('#div-publications-accueil').append(
@@ -190,6 +216,7 @@
             afficheAccueil(data);
 
             affichePublications(data);
+
         }).fail(erreurCritique);
 
         $('#recherche').submit(function () {
