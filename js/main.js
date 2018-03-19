@@ -79,25 +79,26 @@
                 // vue/Body.html
                 if (i % 2 === 0) {
                     $('#publications-accueil-1').append(
-                        $('<h2 />').append(publication.LibellePubl),
-                        $('<p />').append('Numéro de publication : ').append(publication.NumPPubl),
-                        $('<p />').append('Numéro d\'inscrit : ').append(publication.NumInscrit),
+                        $('<h2 />').append(publication.titre),
+                        $('<p />').append(publication.date),
+                        $('<p />').append(publication.LibellePubl),
                         $('<br />')
                     )
                 } else {
                     $('#publications-accueil-2').append(
-                        $('<h2 />').append(publication.LibellePubl),
-                        $('<p />').append('Numéro de publication : ').append(publication.NumPPubl),
-                        $('<p />').append('Numéro d\'inscrit : ').append(publication.NumInscrit),
+                        $('<h2 />').append(publication.titre),
+                        $('<p />').append(publication.date),
+                        $('<p />').append(publication.LibellePubl),
+                        // $('<p />').append('Numéro d\'inscrit : ').append(publication.NumInscrit),
                         $('<br />')
                     )
                 }
 
                 // vue/publications.php
                 $('#publications-publiques').append(
-                    $('<h2 />').append(publication.LibellePubl),
-                    $('<p />').append('Numéro de publication : ').append(publication.NumPPubl),
-                    $('<p />').append('Numéro d\'inscrit : ').append(publication.NumInscrit),
+                    $('<h2 />').append(publication.titre),
+                    $('<p />').append(publication.date),
+                    $('<p />').append(publication.LibellePubl),
                     $('<br />')
                 )
             }
@@ -125,14 +126,51 @@
 
                         // vue/publications.php
                         $('#publications-privees').append(
-                            $('<h2 />').append(publication.LibellePriv),
-                            $('<p />').append('Numéro de publication : ').append(publication.NumPPriv),
-                            $('<p />').append('Numéro d\'inscrit : ').append(publication.NumInscrit),
+                            $('<h2 />').append(publication.titre),
+                            $('<p />').append(publication.date),
+                            $('<p />').append(publication.LibellePriv),
                             $('<br />')
                         )
                     }
                 } // if
             }).fail(erreurCritique);
         }).fail(erreurCritique);
+
+        $('#recherche').submit(function () {
+            $.ajax({
+                'url' : $(this).attr('action'),
+                'method' : $(this).attr('method'),
+                'data' : $(this).serialize()
+            })
+                .done(function (data) {
+                    console.log(data);
+                    $('#div-publications').empty();
+
+                    $('#div-publications').append(
+                        $('<div id="publications"/>').css({
+                            'background-color': 'lightgray',
+                            'border': 'solid white 3px',
+                            'margin' : 'auto',
+                            'border-radius': '10px',
+                            'display': 'inline-block',
+                            'padding': '10px',
+                            'width': '49%'
+                        })
+                    );
+                    for (let i in data) {
+
+                        $('#publications').append(
+                            $('<h2 />').append(data[i]['titre']),
+                            $('<p />').append(data[i]['date']),
+                            $('<p />').append(data[i][1]),
+                            $('<br />')
+                        )
+                    }
+                });
+            return false;
+        });
+
     }); // $('document')
+
+
 })();

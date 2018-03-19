@@ -20,13 +20,13 @@ if(is_null($_SESSION['NumInscrit'])) {
 $resultat = Chercheur::selectByNum($id);
 
 if ($resultat) {
-    PublicationPublique::insertPublicationPublique($_POST['description'], $id);
+    PublicationPublique::insertPublicationPublique($_POST['titre'], $_POST['date'], $_POST['description'], $id);
 //    $req = $bdd->prepare('INSERT INTO PublicationPublique (LibellePubl, NumInscrit) VALUES (:Libelle, :NumInscrit)');
 //    $req->execute(array(
 //        'Libelle' => $_POST['description'],
 //        'NumInscrit' => $id) ) or die (print_r($req->errorInfo())) ;
 } else {
-    PublicationPrivee::insertPublicationPrivee($_POST['description'], $id);
+    PublicationPrivee::insertPublicationPrivee($_POST['titre'], $_POST['description'], $id, $_POST['date']);
 //    $req = $bdd->prepare('INSERT INTO PublicationPrivee (LibellePriv, NumInscrit) VALUES (:Libelle, :NumInscrit)');
 //    $req->execute(array(
 //        'Libelle' => $_POST['description'],

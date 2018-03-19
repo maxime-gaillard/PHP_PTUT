@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="bdd1408a-7cd9-4169-9018-4cadbc6f16c6" name="ftp" url="http://ssh-groupe2equipe2ptut.alwaysdata.net">
-        <fileTransfer host="ssh-groupe2equipe2ptut.alwaysdata.net" port="22" rootFolder="/home/groupe2equipe2ptut/www" accessType="SFTP">
+        <fileTransfer host="ssh-groupe2equipe2ptut.alwaysdata.net" port="22" rootFolder="/home/groupe2equipe2ptut/" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

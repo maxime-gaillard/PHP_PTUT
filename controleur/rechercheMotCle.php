@@ -24,41 +24,53 @@ try {
     $req = $bdd->prepare('SELECT * FROM Entreprise WHERE NumE LIKE ?');
     $req->execute(array($_SESSION['NumInscrit']));
 
-    if($req->fetch()) {
-        $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibellePriv = :search');
-        $req->execute(array('search' => $_POST['search']));
 
-        echo "Resultats de la recherche : <br/><br/>";
-        if($req->rowCount() == 0) {
-            echo "Pas de resultat";
-        }
-        else {
-            while ($data = $req->fetch()) {
-                echo "<strong>";
-                echo $data['LibellePriv'];
-                echo "</strong><br/>";
-            }
-        }
+
+    if($req->fetch()) {
+        $a = '%' . $_POST['search'] . '%';
+        $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibellePriv LIKE :search');
+        $req->execute(array('search' => $a));
+        $resultat = $req->fetchAll();
+
+//        echo "Resultats de la recherche : <br/><br/>";
+//        if($req->rowCount() == 0) {
+//            echo "Pas de resultat";
+//        }
+//        else {
+//            while ($data = $req->fetch()) {
+//                echo "<strong>";
+//                echo $data['LibellePriv'];
+//                echo "</strong><br/>";
+//            }
+//        }
     }
     else {
-        $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl = :search');
-        $req->execute(array('search' => $_POST['search']));
+        $a = '%' . $_POST['search'] . '%';
+        $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl LIKE :search');
+        $req->execute(array('search' => $a));
+        $resultat = $req->fetchAll();
 
-        echo "Resultats de la recherche : <br/><br/>";
-        if($req->rowCount() == 0) {
-            echo "Pas de resultat";
-        }
-        else {
-            while ($data = $req->fetch()) {
-                echo "<strong>";
-                echo $data['LibellePubl'];
-                echo "</strong><br/>";
-            }
-        }
+//        echo "Resultats de la recherche : <br/><br/>";
+//        if($req->rowCount() == 0) {
+//            echo "Pas de resultat";
+//        }
+//        else {
+//            while ($data = $req->fetch()) {
+//                echo "<strong>";
+//                echo $data['LibellePubl'];
+//                echo "</strong><br/>";
+//            }
+//        }
     }
+//
+//    $req->closeCursor();
+//    $bdd = null;
 
-    $req->closeCursor();
-    $bdd = null;
+    header('Cache-Control: no-cache, must-revalidate');
+    header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+    header('Content-type: application/json');
+//    header("Location: ../index.php");
+    echo json_encode($resultat);
 }
 catch (PDOException $e) {
     $e->getMessage();

@@ -20,7 +20,7 @@ function start_page($title)
     echo '</ul>
             </div>
             <div>
-                <form action="../controleur/rechercheMotCle.php" method="post">
+                <form id="recherche" action="../controleur/rechercheMotCle.php" method="post">
                     <input type="search" name="search" placeholder="  Chercher...">
                 </form>
             </div>

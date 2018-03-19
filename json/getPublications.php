@@ -14,7 +14,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 /*$req = $GLOBALS['pdo']->prepare('SELECT * FROM PublicationPublique');
 $req->execute() or die (print_r($req->errorInfo()));*/
 
-$req = $pdo->prepare('SELECT * FROM PublicationPublique');
+$req = $pdo->prepare('SELECT * FROM PublicationPublique ORDER BY NumPPubl DESC');
 $req->execute() or die (print_r($req->errorInfo()));
 
 while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
@@ -22,13 +22,15 @@ while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
     $objet->NumPPubl = $ligne->NumPPubl;
     $objet->LibellePubl = $ligne->LibellePubl;
     $objet->NumInscrit = $ligne->NumInscrit;
+    $objet->titre = $ligne->titre;
+    $objet->date = $ligne->date;
     array_push($articles->publicationsPubl, $objet);
 }
 
 /*$req = $GLOBALS['pdo']->prepare('SELECT * FROM PublicationPrivee');
 $req->execute() or die (print_r($req->errorInfo()));*/
 
-$req = $pdo->prepare('SELECT * FROM PublicationPrivee');
+$req = $pdo->prepare('SELECT * FROM PublicationPrivee ORDER BY NumPPriv DESC');
 $req->execute() or die (print_r($req->errorInfo()));
 
 while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
@@ -36,6 +38,8 @@ while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
     $objet->NumPPriv = $ligne->NumPPriv;
     $objet->LibellePriv = $ligne->LibellePriv;
     $objet->NumInscrit = $ligne->NumInscrit;
+    $objet->titre = $ligne->titre;
+    $objet->date = $ligne->date;
     array_push($articles->publicationsPriv, $objet);
 }
 
