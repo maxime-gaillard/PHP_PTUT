@@ -54,8 +54,7 @@
                 .append($('<p />').html(data[i][typeLibelle]))
             );
             if(data[i]['fichier']){
-
-                div.append(creationFormulaire(data[i]['fichier']));
+                $('#publ').append(creationFormulaire(data[i]['fichier']));
             }
         }
         divFinale.append(div);
