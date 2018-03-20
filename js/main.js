@@ -87,7 +87,7 @@
         let div = $('<div id="publPublications" />').css(cssDiv);
 
         div.append($('<h2 />')
-            .html("Publications publiques :")
+            .html("Publications publiques")
             .css(titreDiv)
         ).append($('<br />'));
 
@@ -97,7 +97,7 @@
             let div1 = $('<div id="publPublicationsPriv" />').css(cssDiv);
 
             div1.append($('<h2 />')
-                .html("Publications privées :")
+                .html("Publications privées")
                 .css(titreDiv)
             ).append($('<br />'));
 
@@ -246,27 +246,33 @@
             })
                 .done(function (data) {
                     $('#div-publications').empty();
-
-                    $('#div-publications').append(
-                        $('<div id="publications"/>').css({
-                            'background-color': 'lightgray',
-                            'border': 'solid white 3px',
-                            'margin' : 'auto',
-                            'border-radius': '10px',
-                            'display': 'inline-block',
-                            'padding': '10px',
-                            'width': '49%'
-                        })
-                    );
-                    for (let i in data) {
-
-                        $('#publications').append(
-                            $('<h2 />').append(data[i]['titre']),
-                            $('<p />').append(data[i]['date']),
-                            $('<p />').append(data[i][1]),
-                            $('<br />')
-                        )
+                    console.log(data);
+                    if (data.publicationsPubl || data.publicationsPriv) {
+                        affichePublications(data);
+                    } else {
+                        $('#div-publications').html("Aucune publications ne correspond à votre recherche.")
                     }
+
+                    // $('#div-publications').append(
+                    //     $('<div id="publications"/>').css({
+                    //         'background-color': 'lightgray',
+                    //         'border': 'solid white 3px',
+                    //         'margin' : 'auto',
+                    //         'border-radius': '10px',
+                    //         'display': 'inline-block',
+                    //         'padding': '10px',
+                    //         'width': '49%'
+                    //     })
+                    // );
+                    // for (let i in data) {
+                    //
+                    //     $('#publications').append(
+                    //         $('<h2 />').append(data[i]['titre']),
+                    //         $('<p />').append(data[i]['date']),
+                    //         $('<p />').append(data[i][1]),
+                    //         $('<br />')
+                    //     )
+                    // }
                 });
             return false;
         });

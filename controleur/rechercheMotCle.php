@@ -20,17 +20,22 @@ try {
         echo "Vous n'etes pas connecte !";
         die();
     }
+    $resultat = new stdClass();
+
+    $a = '%' . $_POST['search'] . '%';
+    $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl LIKE :search');
+    $req->execute(array('search' => $a));
+    $resultat->publicationsPubl = $req->fetchAll();
 
     $req = $bdd->prepare('SELECT * FROM Entreprise WHERE NumE LIKE ?');
     $req->execute(array($_SESSION['NumInscrit']));
 
-
-
     if($req->fetch()) {
-        $a = '%' . $_POST['search'] . '%';
+//        $a = '%' . $_POST['search'] . '%';
         $req = $bdd->prepare('SELECT * FROM PublicationPrivee WHERE LibellePriv LIKE :search');
         $req->execute(array('search' => $a));
-        $resultat = $req->fetchAll();
+        $resultat->publicationsPriv = $req->fetchAll();
+        $resultat->est_entreprise = true;
 
 //        echo "Resultats de la recherche : <br/><br/>";
 //        if($req->rowCount() == 0) {
@@ -44,12 +49,6 @@ try {
 //            }
 //        }
     }
-    else {
-        $a = '%' . $_POST['search'] . '%';
-        $req = $bdd->prepare('SELECT * FROM PublicationPublique WHERE LibellePubl LIKE :search');
-        $req->execute(array('search' => $a));
-        $resultat = $req->fetchAll();
-
 //        echo "Resultats de la recherche : <br/><br/>";
 //        if($req->rowCount() == 0) {
 //            echo "Pas de resultat";
@@ -61,7 +60,7 @@ try {
 //                echo "</strong><br/>";
 //            }
 //        }
-    }
+//    }
 //
 //    $req->closeCursor();
 //    $bdd = null;
