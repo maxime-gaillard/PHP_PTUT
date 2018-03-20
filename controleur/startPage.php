@@ -20,7 +20,7 @@ function start_page($title)
     echo '</ul>
             </div>
             <div>
-                <form id="recherche" action="../controleur/rechercheMotCle.php" method="post">
+                <form  id="recherche" action="../controleur/rechercheMotCle.php" method="post">
                     <input type="search" name="search" placeholder="  Chercher...">
                 </form>
             </div>
@@ -74,7 +74,7 @@ function p2()
             <div>
                 <ul>
                     <li><a href="/index.php" class="active">Accueil</a></li>
-                    <li><a href="/vue/publications.php">Publications</a></li>';
+                    <li><a id="btn-publ" href="/vue/publications.php">Publications</a></li>';
 }
 
 function btnInsCo()

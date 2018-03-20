@@ -104,6 +104,7 @@
 
             boucle (data.publicationsPriv, 0, data.publicationsPriv.length, div1, $('#div-publications'), 'LibellePriv');
         }
+        // $('#recherche').show();
     }
 
     $('document').ready(function () {
@@ -277,6 +278,10 @@
                 });
             return false;
         });
+
+        // $('#btn-publ').click(function () {
+        //     $('#recherche').show();
+        // })
 
         // $('#div-publications-accueil').css(cssDivAccueil);
 
