@@ -19,8 +19,8 @@
         inputNomFic.attr("value",nomFichier);
         inputNomFic.css("display","none");
         leBouton.attr("type","submit");
+        leBouton.attr("class","active1");
         leBouton.attr("value","Télécharger la pièce jointe");
-        leBouton.css("margin-left","38px");
         formDownload.append(inputNomFic);
         formDownload.append(leBouton);
         return formDownload;
@@ -34,7 +34,7 @@
                     'background-color' : 'white',
                     'margin' : 'auto',
                     'width' : '95%',
-                    'height' : '220px',
+                    'height' : '245px',
                     'padding-top' : '5px',
                     'margin-bottom' : '15px',
                     // 'border-style' : 'solid',
@@ -52,10 +52,8 @@
                 )
                 .append($('<p />').html(data[i]['date']))
                 .append($('<p />').html(data[i][typeLibelle]))
+                .append(data[i]['fichier'] ? creationFormulaire(data[i]['fichier']) : null)
             );
-            if(data[i]['fichier']){
-                $('#publ').append(creationFormulaire(data[i]['fichier']));
-            }
         }
         divFinale.append(div);
     }
