@@ -93,7 +93,7 @@
 
         boucle (data.publicationsPubl, 0, data.publicationsPubl.length, div, $('#div-publications'), 'LibellePubl');
 
-        if (data.est_entreprise) {
+        if (data.est_entreprise && data.publicationsPriv.length) {
             let div1 = $('<div id="publPublicationsPriv" />').css(cssDiv);
 
             div1.append($('<h2 />')
@@ -247,7 +247,7 @@
                 .done(function (data) {
                     $('#div-publications').empty();
                     console.log(data);
-                    if (data.publicationsPubl || data.publicationsPriv) {
+                    if (data.publicationsPubl.length || data.publicationsPriv.length) {
                         affichePublications(data);
                     } else {
                         $('#div-publications').html("Aucune publications ne correspond à votre recherche.")
