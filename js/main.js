@@ -8,6 +8,24 @@
         );
     };
 
+    let creationFormulaire = function (nomFichier){
+        let formDownload = $('<form />');
+        formDownload.attr("action","../controleur/download.php");
+        formDownload.attr("method","POST");
+        let inputNomFic = $('<input />');
+        let leBouton = $('<input />');
+        inputNomFic.attr("type","text");
+        inputNomFic.attr("name","nomFic");
+        inputNomFic.attr("value",nomFichier);
+        inputNomFic.css("display","none");
+        leBouton.attr("type","submit");
+        leBouton.attr("value","Télécharger la pièce jointe");
+        leBouton.css("margin-left","38px");
+        formDownload.append(inputNomFic);
+        formDownload.append(leBouton);
+        return formDownload;
+    };
+
     function boucle (data, k, j, div, divFinale, typeLibelle) {
 
         for (let i = k; i < j; ++i) {
@@ -35,6 +53,10 @@
                 .append($('<p />').html(data[i]['date']))
                 .append($('<p />').html(data[i][typeLibelle]))
             );
+            if(data[i]['fichier']){
+
+                div.append(creationFormulaire(data[i]['fichier']));
+            }
         }
         divFinale.append(div);
     }
@@ -89,7 +111,7 @@
     $('document').ready(function () {
         $.ajax({
             url: '/json/getPublications.php',
-            method: 'get'
+            method: 'get',
 
         }).done(function (data) {
             // // vue/Body.html
@@ -226,7 +248,6 @@
                 'data' : $(this).serialize()
             })
                 .done(function (data) {
-                    console.log(data);
                     $('#div-publications').empty();
 
                     $('#div-publications').append(

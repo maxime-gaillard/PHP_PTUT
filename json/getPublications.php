@@ -31,6 +31,7 @@ while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
     $objet->NumInscrit = $ligne->NumInscrit;
     $objet->titre = $ligne->titre;
     $objet->date = $ligne->date;
+    $objet->fichier = $ligne->fichier;
     array_push($articles->publicationsPubl, $objet);
 }
 
@@ -47,6 +48,7 @@ while ($ligne = $req->fetch(PDO::FETCH_OBJ)) {
     $objet->NumInscrit = $ligne->NumInscrit;
     $objet->titre = $ligne->titre;
     $objet->date = $ligne->date;
+    $objet->fichier = $ligne->fichier;
     array_push($articles->publicationsPriv, $objet);
 }
 

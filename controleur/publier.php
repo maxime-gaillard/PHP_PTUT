@@ -1,62 +1,34 @@
 <?php
 session_start();
 
-
 include '../modele/IncludeDB.php';
+
 $descitpion = htmlspecialchars($_POST['description']);
 
-// Where the file is going to be placed
-//$target_path = "../fichierjoint/";
-//
-//var_dump($_FILES);
-//die;
+define("UPLOAD_DIR", "../fichierjoint/");
 
-/* Add the original filename to our target path.
-Result is "uploads/filename.extension" */
-//$target_path = $target_path . basename( $_FILES['userfile']['name']);
+if (!empty($_FILES["myFile"])) {
+    $myFile = $_FILES["myFile"];
+    $name = preg_replace("/[^A-Z0-9._-]/i", "_", $myFile["name"]);
+    $i = 0;
+    $parts = pathinfo($name);
+    while (file_exists(UPLOAD_DIR . $name)) {
+        $i++;
+        $name = $parts["filename"] . "-" . $i . "." . $parts["extension"];
+    }
+    $nomFic = $name;
+    $success = move_uploaded_file($myFile["tmp_name"],
+        UPLOAD_DIR . $name);
 
-
-
-//$target_path = $target_path . basename( $_FILES['uploadedfile']['name']);
-
-//echo '-->' . $target_path;
-//
-//
-//
-//if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
-//    echo "The file ".  basename( $_FILES['userfile']['name']).
-//        " has been uploaded";
-//} else{
-//    echo "There was an error uploading the file, please try again!";
-//}
-
-
-//$path = "../fichierjoint";
-//$path = $path . basename( $_FILES['userfile']['name']);
-//
-//echo "test";
-//
-//if(move_uploaded_file($_FILES['userfile']['tmp_name'], $path)) {
-//    echo "Success uploading". basename($_FILES['userfile']['name']);
-//} else {
-//    echo "Error when uploading file.";
-//}
-
-if($descitpion == "" || is_null($descitpion)) {
+    chmod(UPLOAD_DIR . $name, 0644);
 }
-
 $id = $_SESSION['NumInscrit'];
-
-if(is_null($_SESSION['NumInscrit'])) {
-}
-
-
 $resultat = Chercheur::selectByNum($id);
 
 if ($resultat) {
-    PublicationPublique::insertPublicationPublique($_POST['titre'], $_POST['date'], $_POST['description'], $id);
+    PublicationPublique::insertPublicationPublique($_POST['titre'], $_POST['date'], $_POST['description'], $id, $nomFic);
 } else {
-    PublicationPrivee::insertPublicationPrivee($_POST['titre'], $_POST['description'], $id, $_POST['date']);
+    PublicationPrivee::insertPublicationPrivee($_POST['titre'], $_POST['description'], $id, $_POST['date'], $nomFic);
 }
 
 header('Location:../index.php');

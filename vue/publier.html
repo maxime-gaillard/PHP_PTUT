@@ -50,7 +50,7 @@
 <div class="row">
     <div id="formulaire" class="container text-center">
         <h2 class="text-center">Publier</h2>
-        <form action="../controleur/publier.php" method="post" class="text-center">
+        <form action="../controleur/publier.php" method="post" enctype="multipart/form-data" class="text-center">
             <div class="form-group">
                 <select class="form-control">
                     <option>enterprise privé</option>
@@ -66,8 +66,6 @@
                 <input type="radio" id="retour_experience" name="sujet_formulaire" value="retour experience">
                 <label for="retour_experience">retour d'experience</label>
             </div>
-
-
 
             <div class="form-group" id="titre">
                 <input type="text"  name="titre" class="form-control" placeholder="Titre">
@@ -90,7 +88,7 @@
 
             <br/>
             <div class="form-group">
-                <input name="userfile" type="file"><br/><br/>
+                <p>Vous pouvez ajouter une pièce jointe à votre publication</p><input name="myFile" type="file"><br/><br/>
                 <button type="submit" value="valider" class="w3-button w3-white w3-hover-orange">Envoyer</button>
             </div>
         </form>
@@ -137,5 +135,6 @@
         $("#imageUpload").click();
     }
 </script>
+
 </body>
 </html>

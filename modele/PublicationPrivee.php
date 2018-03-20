@@ -8,15 +8,14 @@
 
 class PublicationPrivee
 {
-    public static function insertPublicationPrivee($titre, $description, $id, $date)
+    public static function insertPublicationPrivee($titre, $description, $id, $date, $fichier)
     {
-        $req = $GLOBALS['pdo']->prepare('INSERT INTO PublicationPrivee (LibellePriv, NumInscrit, titre, date) VALUES (:Libelle, :NumInscrit, :titre, :date)');
+        $req = $GLOBALS['pdo']->prepare('INSERT INTO PublicationPrivee (LibellePriv, NumInscrit, titre, date, fichier) VALUES (:Libelle, :NumInscrit, :titre, :date, :fichier)');
         $req->execute(array(
             'titre' => $titre,
             'Libelle' => $description,
             'NumInscrit' => $id,
-            'date' => $date) ) or die (print_r($req->errorInfo())) ;
+            'date' => $date,
+            'fichier' => $fichier) ) or die (print_r($req->errorInfo())) ;
     }
-
-
 }
