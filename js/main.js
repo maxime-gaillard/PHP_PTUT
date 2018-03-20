@@ -37,6 +37,7 @@
                     'height' : '245px',
                     'padding-top' : '5px',
                     'margin-bottom' : '15px',
+                    'position' : 'relative',
                     // 'border-style' : 'solid',
                     // 'border-color' : '#FFA500',
                     // 'border-bottom-width' : '0px',
