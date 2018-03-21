@@ -11,19 +11,23 @@ include '../modele/IncludeDB.php';
 $req = $bdd->prepare('SELECT NumInscrit, MotDePasse FROM Inscrit WHERE Email = :Email');
 $req->execute(array('Email' => $_POST['Email']));*/
 
-$resultat = Inscrit::selectByEmail($_POST['Email']);
-$message = '';
-
-if (!$resultat) {
-    $message = "Le mail n'existe pas";
+if(empty($_POST['Email']) || empty($_POST['MotDePasse'])){
+    $message = "Saisir mail ET Mot de passe";
 } else {
-    if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
-        $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
-        $_SESSION['Email'] = $_POST['Email'];
-        $message = 'Vous êtes connecté';
+    $resultat = Inscrit::selectByEmail($_POST['Email']);
+    $message = '';
+
+    if (!$resultat) {
+        $message = "Le mail n'existe pas";
     } else {
-        $message = 'Mauvais mot de passe';
+        if (password_verify($_POST['MotDePasse'], $resultat['MotDePasse'])) {
+            $_SESSION['NumInscrit'] = $resultat['NumInscrit'];
+            $_SESSION['Email'] = $_POST['Email'];
+            $message = 'Vous êtes connecté';
+        } else {
+            $message = 'Mauvais mot de passe';
+        }
     }
 }
+
 header("Location:../index.php?message=$message");
-?>

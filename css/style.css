@@ -105,7 +105,7 @@ input[type=password]{
     height: 2em;
 }
 
-#valider1{
+#valider1, #annuler{
     display:inline-block;
     margin-right: -5px;
     width:120px;

@@ -65,6 +65,13 @@ function p2()
                     <input type="password" name="MotDePasse" placeholder="Mot de passe">
                     <!--<a href="#" id="valider">Valider</a>-->
                     <button id="valider" type="submit" class="w3-button w3-white w3-hover-orange">Valider</button>
+                    <button id="annuler" class="w3-button w3-white w3-hover-orange">Annuler</button>
+                    <script>
+                        let annuler = $("#annuler");
+                        annuler.onclick = function () {
+                            $("#modalConnexion").hide();
+                        };
+                    </script>
                 </form>
             </div>
         </div>
