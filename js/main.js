@@ -43,10 +43,6 @@
                     // 'border-bottom-width' : '0px',
                     'padding-left' : '20px'
                 })
-                //
-                // .css({
-                //     'border-right-width' : '0px'
-                // })
                 .append($('<h2 />')
                     .html(data[i]['titre'])
                     .css({'font-weight' : 'bold'})
@@ -234,8 +230,8 @@
             //         }
             //     } // if
             // }).fail(erreurCritique);
+            //$('#messhaut').hide();
             afficheAccueil(data);
-
             affichePublications(data);
 
         }).fail(erreurCritique);

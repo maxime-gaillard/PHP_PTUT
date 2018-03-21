@@ -2,15 +2,6 @@
 session_start();
 include '../modele/IncludeDB.php';
 
-/*try {
-    $bdd = new PDO('mysql:host=mysql-groupe2equipe2ptut.alwaysdata.net;dbname=groupe2equipe2ptut_base;charset=utf8', '146012', '123');
-
-} catch (Exception $e) {
-    die('Erreur de connexion : ' . $e->getMessage());
-}
-$req = $bdd->prepare('SELECT NumInscrit, MotDePasse FROM Inscrit WHERE Email = :Email');
-$req->execute(array('Email' => $_POST['Email']));*/
-
 if(empty($_POST['Email']) || empty($_POST['MotDePasse'])){
     $message = "Saisir mail ET Mot de passe";
 } else {
