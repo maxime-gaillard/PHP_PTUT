@@ -109,6 +109,11 @@
             method: 'get',
 
         }).done(function (data) {
+
+            if (!data.est_entreprise) {
+                console.log("testtsifh");
+                $('#selectPartenaire').css("display", "none");
+            }
             // // vue/Body.html
             // $('#div-publications-accueil').append(
             //     $('<div />').css({

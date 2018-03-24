@@ -51,7 +51,7 @@
     <div id="formulaire" class="container text-center">
         <h2 class="text-center">Publier</h2>
         <form action="../controleur/publier.php" method="post" enctype="multipart/form-data" class="text-center">
-            <div class="form-group">
+            <div id="selectPartenaire" class="form-group">
                 <select class="form-control">
                     <option>Entreprise privée</option>
                     <option>Entreprise publique</option>
@@ -124,17 +124,17 @@
     })
 </script>
 
-<script>
-    let connexion = document.getElementById('connexion');
-    connexion.onclick = function () {
-        document.getElementById("modalConnexion").style.visibility = "visible";
-        document.getElementById("options").style.visibility = "hidden";
-    };
+<!--<script>-->
+    <!--let connexion = document.getElementById('connexion');-->
+    <!--connexion.onclick = function () {-->
+        <!--document.getElementById("modalConnexion").style.visibility = "visible";-->
+        <!--document.getElementById("options").style.visibility = "hidden";-->
+    <!--};-->
 
-    function myFunction() {
-        $("#imageUpload").click();
-    }
-</script>
+    <!--function myFunction() {-->
+        <!--$("#imageUpload").click();-->
+    <!--}-->
+<!--</script>-->
 
 </body>
 </html>
