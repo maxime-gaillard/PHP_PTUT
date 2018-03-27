@@ -24,6 +24,7 @@ if(    empty($_POST['Nom'])
 
     if ($type == "chercheur") {
         Chercheur::insertChercheur($_POST['IdC'], $NumInscrit);
+        header("Location:/index.php");
     } else {
         $NomE = ($_POST['NomE']);
         $SIREN = ($_POST['SIREN']);
