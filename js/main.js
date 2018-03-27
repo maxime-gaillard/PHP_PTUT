@@ -34,7 +34,7 @@
                     'background-color' : 'white',
                     'margin' : 'auto',
                     'width' : '95%',
-                    'height' : '245px',
+                    'height' : '260px',
                     'padding-top' : '5px',
                     'margin-bottom' : '15px',
                     'position' : 'relative',
@@ -81,14 +81,20 @@
     }
 
     function affichePublications(data) {
-        let div = $('<div id="publPublications" />').css(cssDiv);
 
-        div.append($('<h2 />')
-            .html("Publications publiques")
-            .css(titreDiv)
-        ).append($('<br />'));
+        let isempty = true;
 
-        boucle (data.publicationsPubl, 0, data.publicationsPubl.length, div, $('#div-publications'), 'LibellePubl');
+        if (data.publicationsPubl.length) {
+            let div = $('<div id="publPublications" />').css(cssDiv);
+
+            div.append($('<h2 />')
+                .html("Publications publiques")
+                .css(titreDiv)
+            ).append($('<br />'));
+
+            boucle(data.publicationsPubl, 0, data.publicationsPubl.length, div, $('#div-publications'), 'LibellePubl');
+            isempty = false;
+        }
 
         if (data.est_entreprise && data.publicationsPriv.length) {
             let div1 = $('<div id="publPublicationsPriv" />').css(cssDiv);
@@ -99,6 +105,14 @@
             ).append($('<br />'));
 
             boucle (data.publicationsPriv, 0, data.publicationsPriv.length, div1, $('#div-publications'), 'LibellePriv');
+            isempty = false;
+        }
+
+
+        // console.log("bouuuuu");
+        if (isempty) {
+            $('#div-publications').html("Aucune publications ne correspond à votre recherche.")
+                .css('float', 'right');
         }
         // $('#recherche').show();
     }
@@ -111,7 +125,7 @@
         }).done(function (data) {
 
             if (!data.est_entreprise) {
-                console.log("testtsifh");
+                // console.log("testtsifh");
                 $('#selectPartenaire').css("display", "none");
             }
             // // vue/Body.html
@@ -235,7 +249,7 @@
             //         }
             //     } // if
             // }).fail(erreurCritique);
-            //$('#messhaut').hide();
+            //$('#messhaut').hide();a
             afficheAccueil(data);
             affichePublications(data);
 
@@ -249,11 +263,11 @@
             })
                 .done(function (data) {
                     $('#div-publications').empty();
-                    console.log(data);
-                    if (data.publicationsPubl.length || data.publicationsPriv.length) {
-                        affichePublications(data);
+                    // console.log(data);
+                    if (data.publicationsPubl == null|| data.publicationsPriv == null) {
+                        window.location.reload();
                     } else {
-                        $('#div-publications').html("Aucune publications ne correspond à votre recherche.")
+                        affichePublications(data);
                     }
 
                     // $('#div-publications').append(
@@ -283,7 +297,6 @@
         // $('#btn-publ').click(function () {
         //     $('#recherche').show();
         // })
-
         // $('#div-publications-accueil').css(cssDivAccueil);
 
     }); // $('document')
