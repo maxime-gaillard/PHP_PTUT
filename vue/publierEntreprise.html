@@ -4,18 +4,18 @@
         <h2 class="text-center">Publier</h2>
         <form action="../controleur/publier.php" method="post" enctype="multipart/form-data" class="text-center">
             <div id="selectPartenaire" class="form-group">
-                <select class="form-control">
+                <select class="form-control" name="typeEntreprise">
                     <option>Entreprise privée</option>
                     <option>Entreprise publique</option>
                     <option>Association</option>
                 </select>
             </div>
             <div class="form-group">
-                <input type="radio" id="offre" name="sujet_formulaire" value="offre" checked>
+                <input type="radio" id="offre" name="typePublication" value="offre" checked>
                 <label for="offre">Offre</label>
-                <input type="radio" id="demande" name="sujet_formulaire" value="demande">
+                <input type="radio" id="demande" name="typePublication" value="demande">
                 <label for="demande">Demande</label>
-                <input type="radio" id="retour_experience" name="sujet_formulaire" value="retour experience">
+                <input type="radio" id="retour_experience" name="typePublication" value="retour">
                 <label for="retour_experience">Retour d'expérience</label>
             </div>
 
@@ -27,7 +27,7 @@
                 <input type="date"  name="date" class="form-control" placeholder="Date">
             </div>
             <div class="form-group" id="type">
-                <input type="text"  name="type" class="form-control" placeholder="Type de produit">
+                <input type="text"  name="typeProduit" class="form-control" placeholder="Type de produit">
             </div>
 
             <div class="form-group" id="contrainte">
@@ -41,6 +41,7 @@
             <div class="form-group">
                 <p>Vous pouvez ajouter une pièce jointe à votre publication</p><input name="myFile" type="file"><br/><br/>
                 <button type="submit" value="valider" class="w3-button w3-white w3-hover-orange">Envoyer</button>
+                <p id="messagepublication"><?php echo $_GET['messagepub']; ?></p>
             </div>
         </form>
     </div>

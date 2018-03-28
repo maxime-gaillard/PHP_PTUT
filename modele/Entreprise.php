@@ -17,4 +17,9 @@ class Entreprise
             'SIREN' => $SIREN)) or die (print_r($req->errorInfo()));
     }
 
+    public static function selectByNum ($id) {
+        $req = $GLOBALS['pdo']->prepare('SELECT NumE FROM Entreprise WHERE NumE = :numE');
+        $req->execute(array('numE' => $id) ) or die (print_r($req->errorInfo())) ;
+        return $req->fetch();
+    }
 }
