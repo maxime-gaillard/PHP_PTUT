@@ -22,17 +22,16 @@
             <div class="form-group" id="titre">
                 <input type="text"  name="titre" class="form-control" placeholder="Titre">
             </div>
+
             <div class="form-group" id="date">
                 <input type="date"  name="date" class="form-control" placeholder="Date">
             </div>
             <div class="form-group" id="type">
-                <input type="text"  name="type" class="form-control" placeholder="type de produit">
+                <input type="text"  name="type" class="form-control" placeholder="Type de produit">
             </div>
-            <div class="form-group" id="volume">
-                <input type="text"  name="volume" class="form-control" placeholder="volume de produit">
-            </div>
+
             <div class="form-group" id="contrainte">
-                <textarea class="form-control" name="contrainte" placeholder="contrainte(s)" cols="10" rows="4"></textarea>
+                <textarea class="form-control" name="contrainte" placeholder="Contrainte(s)" cols="10" rows="4"></textarea>
             </div>
             <div class="form-group" id="description">
                 <textarea class="form-control" name="description" placeholder="Description" cols="10" rows="8"></textarea>
@@ -52,27 +51,24 @@
         $('#titre').show();
         $('#date').show();
         $('#type').show();
-        $('#volume').show();
-        $('#contrainte').hide();
+        $('#contrainte').show();
         $('#description').show();
     })
 
     $('#demande').click(function () {
         $('#titre').show();
-        $('#date').hide();
+        $('#date').show();
         $('#type').show();
-        $('#volume').hide();
         $('#contrainte').show();
         $('#description').show();
     })
 
     $('#retour_experience').click(function () {
-        $('#titre').hide();
+        $('#titre').show();
         $('#date').show();
-        $('#type').show();
-        $('#volume').show();
-        $('#contrainte').show();
-        $('#description').hide();
+        $('#type').hide();
+        $('#contrainte').hide();
+        $('#description').show();
     })
 </script>
 
