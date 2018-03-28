@@ -20,7 +20,7 @@ function start_page($title)
     echo '</ul>
             </div>
             <div>';
-    if (isset($_GET['a'])) {
+    if (isset($_GET['a']) && $_SESSION['NumInscrit']) {
         echo '<form  id="recherche" action="../controleur/rechercheMotCle.php" method="post">
                     <input type="search" name="search" placeholder="  Chercher...">
                 </form>';

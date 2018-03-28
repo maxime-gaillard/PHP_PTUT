@@ -264,7 +264,7 @@
                 .done(function (data) {
                     $('#div-publications').empty();
                     // console.log(data);
-                    if (data.publicationsPubl == null|| data.publicationsPriv == null) {
+                    if (data.publicationsPubl == null && data.publicationsPriv == null) {
                         window.location.reload();
                     } else {
                         affichePublications(data);
