@@ -6,6 +6,17 @@
  * Time: 16:42
  */
 session_start();
+
+include '../modele/IncludeDB.php';
+
 include 'startPage.php';
 start_page('Publier');
-include '../vue/publier.html';
+
+$id = $_SESSION['NumInscrit'];
+$resultat = Chercheur::selectByNum($id);
+
+if ($resultat) {
+    include '../vue/publierChercheur.html';
+} else {
+    include '../vue/publierEntreprise.html';
+}
