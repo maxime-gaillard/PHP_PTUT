@@ -6,15 +6,19 @@ function start_page($title)
     p1($title);
 
     if (empty($_SESSION['NumInscrit'])) {
-        btnInsCo();
+        btnInsCo($title);
     } else {
         echo '<li><a href="../controleur/deconnexion.php">Déconnexion</a></li>';
     }
 
-    p2();
+    p2($title);
 
     if (isset($_SESSION['NumInscrit'])) {
-        echo '<li><a href="../controleur/ControleurPublier.php">Publier</a></li>';
+        echo '<li><a href="../controleur/ControleurPublier.php"';
+        if ($title == "Publier") {
+            echo 'class = active';
+        }
+        echo '>Publier</a></li>';
     }
 
     echo '</ul>
@@ -57,7 +61,7 @@ function p1($title)
                 <ul>';
 }
 
-function p2()
+function p2($title)
 {
     echo '</ul>
                 </div>
@@ -83,13 +87,29 @@ function p2()
             <div></div>
             <div>
                 <ul>
-                    <li><a href="/index.php" class="active">Accueil</a></li>
-                    <li><a id="btn-publ" href="/vue/publications.php?a=1">Publications</a></li>';
+                    <li><a href="/index.php"';
+
+    if ($title == "Index") {
+        echo 'class = active';
+    }
+
+    echo '>Accueil</a></li>
+                    <li><a id="btn-publ" href="/vue/publications.php?a=1"';
+    if ($title == "Publications") {
+        echo 'class = active';
+    }
+    echo '>Publications</a></li>';
 }
 
-function btnInsCo()
+function btnInsCo($title)
 {
-    echo '<li><a href="../controleur/ControleurInscription.php">S\'inscrire</a></li>
+    echo '<li><a href="../controleur/ControleurInscription.php"';
+
+    if ($title == "Inscription") {
+        echo 'class = active';
+    }
+
+    echo '>S\'inscrire</a></li>
                     <li><a href="#" id="connexion">Connexion</a></li>
                     <script>
                         let connexion = document.getElementById("connexion");
