@@ -8,15 +8,19 @@
 session_start();
 
 include '../modele/IncludeDB.php';
-
 include 'startPage.php';
-start_page('Publier');
 
-$id = $_SESSION['NumInscrit'];
-$resultat = Chercheur::selectByNum($id);
-
-if ($resultat) {
-    include '../vue/publierChercheur.html';
+if(empty($_SESSION['NumInscrit'])){
+    header('Location:../index.php');
 } else {
-    include '../vue/publierEntreprise.html';
+    start_page('Publier');
+
+    $id = $_SESSION['NumInscrit'];
+    $resultat = Chercheur::selectByNum($id);
+
+    if ($resultat) {
+        include '../vue/publierChercheur.html';
+    } else {
+        include '../vue/publierEntreprise.html';
+    }
 }

@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5b9281b4-ae9a-41e6-b8d1-0834ee746fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controleur/publier.php" afterPath="$PROJECT_DIR$/controleur/publier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modele/Chercheur.php" afterPath="$PROJECT_DIR$/modele/Chercheur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modele/Entreprise.php" afterPath="$PROJECT_DIR$/modele/Entreprise.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modele/PublicationPrivee.php" afterPath="$PROJECT_DIR$/modele/PublicationPrivee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controleur/ControleurPublier.php" afterPath="$PROJECT_DIR$/controleur/ControleurPublier.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/inscription.html" afterPath="$PROJECT_DIR$/vue/inscription.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/publierEntreprise.html" afterPath="$PROJECT_DIR$/vue/publierEntreprise.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="publier.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="publier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controleur/publier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -55,16 +51,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fichier_De_Test_Upload.txt" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;bdd1408a-7cd9-4169-9018-4cadbc6f16c6&gt;/www/fichierjoint/Fichier_De_Test_Upload.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PublicationPublique.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/PublicationPublique.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,8 +76,8 @@
       <file leaf-file-name="ControleurPublier.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controleur/ControleurPublier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -106,6 +92,18 @@
                 <marker date="1522248544238" expanded="true" signature="329:629" ph="INSERT INTO PublicationPrivee... " />
                 <marker date="1522248544238" expanded="true" signature="1292:1591" ph="INSERT INTO PublicationPrivee... " />
                 <marker date="1522248544238" expanded="true" signature="2210:2457" ph="INSERT INTO PublicationPrivee... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscription.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/inscription.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+              <folding>
+                <marker date="1522249838491" expanded="false" signature="2400:2415" ph="..." />
               </folding>
             </state>
           </provider>
@@ -201,7 +199,6 @@
         <option value="$PROJECT_DIR$/json/estEntreprise.php" />
         <option value="$PROJECT_DIR$/modele/db_connect.php" />
         <option value="$PROJECT_DIR$/modele/Inscrit.php" />
-        <option value="$PROJECT_DIR$/controleur/ControleurPublier.php" />
         <option value="$PROJECT_DIR$/vue/publications.php" />
         <option value="$PROJECT_DIR$/modele/PublicationPublique.php" />
         <option value="$PROJECT_DIR$/json/getPublications.php" />
@@ -213,13 +210,14 @@
         <option value="$PROJECT_DIR$/controleur/rechercheMotCle.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/vue/inscription.html" />
         <option value="$PROJECT_DIR$/vue/publierChercheur.html" />
         <option value="$PROJECT_DIR$/modele/Entreprise.php" />
         <option value="$PROJECT_DIR$/modele/Chercheur.php" />
         <option value="$PROJECT_DIR$/controleur/publier.php" />
         <option value="$PROJECT_DIR$/modele/PublicationPrivee.php" />
         <option value="$PROJECT_DIR$/vue/publierEntreprise.html" />
+        <option value="$PROJECT_DIR$/controleur/ControleurPublier.php" />
+        <option value="$PROJECT_DIR$/vue/inscription.html" />
       </list>
     </option>
   </component>
@@ -546,13 +544,6 @@
       <workItem from="1521485293446" duration="3288000" />
       <workItem from="1521628793417" duration="5026000" />
       <workItem from="1522166963109" duration="3576000" />
-    </task>
-    <task id="LOCAL-00013" summary="Gestion des erreurs et NumInscrit pour la recherche">
-      <created>1512207209802</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1512207209802</updated>
     </task>
     <task id="LOCAL-00014" summary="Rechercher sur les autres pages">
       <created>1512207365561</created>
@@ -890,11 +881,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522238344131</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Travail sur la fonction publier OK">
+      <created>1522248820007</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1522248820007</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112505000" />
+    <option name="totallyTimeSpent" value="113816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -943,8 +941,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modification du chemin vers le fichier" />
-    <MESSAGE value="Recherche de publications" />
     <MESSAGE value="Action pour le formulaire de recherche de publication" />
     <MESSAGE value="Gestion des erreurs et NumInscrit pour la recherche" />
     <MESSAGE value="Rechercher sur les autres pages" />
@@ -968,7 +964,9 @@
     <MESSAGE value="Modification recherche" />
     <MESSAGE value="Redirection sur la page d'accueil lors de l'inscription d'un chercheur" />
     <MESSAGE value="Travail sur la fonction publier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travail sur la fonction publier" />
+    <MESSAGE value="Travail sur la fonction publier OK" />
+    <MESSAGE value="Corrections sur le formulaire d'inscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrections sur le formulaire d'inscription" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1172,24 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522240126260" expanded="false" signature="2391:2406" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/ControleurPublier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controleur/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1260,9 +1240,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controleur/publier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/ControleurPublier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/inscription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <marker date="1522249838491" expanded="false" signature="2400:2415" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
